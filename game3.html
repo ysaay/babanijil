@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.min.css">
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/jquery.mobile-1.2.0.min.js"></script>
+</head>
+<body>
+<div data-role="page" data-theme="b" id="mainPage">
+	<div data-role="header">
+		<h1>GameVal</h1>
+	</div>
+	<img src="images/cover.png" width="100%" height="100%"></img>
+	<div data-role="footer" data-position="fixed">
+	<div data-role="navbar">
+	<ul>
+	<li><a href="#pageTwo" data-transition="pop" data-icon="grid" >LIST</a></li>
+	</ul>
+	</div>
+	</div>
+</div>
+
+<!-- Start of Page 2 -->
+<div data-role="page" data-theme="b" id="pageTwo">
+	<div data-role="header">
+	</div>
+	<div data-role="content">
+	</div>
+			
+	<div data-role="collapsible" data-theme="b">
+		<h2>Game Instructions</h2>
+
+	<ul data-role="listview">
+	<div data-role="collapsible" data-theme="b">
+		<h2>LET'S BEGIN!</h2>
+
+	<ul data-role="listview">
+	<li><a href="#page3">Death By</a></li>
+	<li><a href="#page4">Wink Murder</a></li>
+	<li><a href="#page5">Drawing Game</a></li>
+	<li><a href="#page6">Heads Up 7-Up!</a></li>
+	<li><a href="#page7">Who is missing?</a></li>
+	<li><a href="#page8">Four corners</a></li>
+	<li><a href="#page9">Silent ball</a></li>
+	<!-- walang 10 -->
+    <li><a href="#page11">"I love you honey"</a></li>
+	<li><a href="#page12">Splatter</a></li>
+	</ul>
+</div>
+	<!--<div data-role="collapsible" data-theme="a">
+		<h2>District II</h2>
+
+	<ul data-role="listview">
+	<li><a href="#page13">Balic-Balic Elementary School</a></li>
+	<li><a href="#page14">Gordon Heights I Elementary School</a></li>
+	<li><a href="#page15">Gordon Heights II Elementary School</a></li>
+	<li><a href="#page16">Mabayuan Elementary School</a></li>
+	<li><a href="#page17">Sta. Rita Elementary School</a></li>
+	<li><a href="#page18">Tabacuhan Elementary School</a></li>
+	</ul>
+</div>
+	<div data-role="collapsible" data-theme="a">
+		<h2>District III</h2>
+
+	<ul data-role="listview">
+	<li><a href="#page19">Banicain Elementary School</a></li>
+	<li><a href="#page20">Barretto I Elementary School</a></li>
+	<li><a href="#page21">Barretto II Elementary School</a></li>
+	<li><a href="#page22">James L. Gordon IS</a></li>
+	<li><a href="#page23">Nellie E. Brown Elementary School</a></li>
+	<li><a href="#page24">Sergia Soriano Esteban IS II</a></li>
+	<li><a href="#page25">Sergia Soriano Esteban IS of Kalaklan (Kalaklan Elementary School)</a></li>
+	</ul>
+</div>
+	<div data-role="collapsible" data-theme="a">
+		<h2>District IV</h2>
+
+	<ul data-role="listview">
+	<li><a href="#page26">Asinan Elementary School</a></li>
+	<li><a href="#page27">Ilalim Elementary School</a></li>
+	<li><a href="#page28">Kalalake Elementary School</a></li>
+	<li><a href="#page29">SPED-Gifted</a></li>
+	<li><a href="#page30">Tapinac Elementary School</a></li>
+	</ul>
+</div>-->
+</ul>
+</div>
+<!--
+<div data-role="collapsible" data-theme="a">
+		<h2>SECONDARY PUBLIC SCHOOL</h2>
+
+	<ul data-role="listview">
+	<li><a href="#page31">Death By</a></li>
+	<li><a href="#page32">City of Olongapo NHS</a></li>
+	<li><a href="#page33">Gordon Heights NHS</a></li>
+	<li><a href="#page34">Iram HS (Resettlement School)</a></li>
+	<li><a href="#page35">James L. Gordon IS</a></li>
+	<li><a href="#page36">Kalalake NHS</a></li>
+	<li><a href="#page37">New Cabalan NHS</a></li>
+	<li><a href="#page38">Old Cabalan High School</a></li>
+	<li><a href="#page38">Regional Science HS</a></li>
+	<li><a href="#page40">Sergia Soriano Esteban IS II</a></li>
+	<li><a href="#page41">Sergia Soriano Esteban IS of Kalaklan</a></li>
+	<li><a href="#page42">Sta. Rita HS</a></li>
+	</ul>
+</div>
+<div data-role="collapsible" data-theme="a">
+		<h2>PRIVATE SCHOOL</h2>
+
+	<ul data-role="listview">
+	<li><a href="#page43">Aura De laurentus Business HS</a></li>
+	<li><a href="#page44">Bright Star Child Development Center</a></li>
+	<li><a href="#page45">Brightfields Montessori School</a></li>
+	<li><a href="#page46">Christ The King Catholic School</a></li>
+	<li><a href="#page47">Christian Baptist Academy</a></li>
+	<li><a href="#page48">Columban College-Asinan</a></li>
+	<li><a href="#page49">Columban College-Barretto</a></li>
+	<li><a href="#page50">F.I.R.S.T Child LearningCenter (Freeprot Institute for Research Science & Tech.)</a></li>
+	<li><a href="#page51">Heaven Sent Tutorial and Learning Center</a></li>
+	<li><a href="#page52">Holy Infant Jesus College</a></li>
+	<li><a href="#page53">Jireh Christian Academy</a></li>
+	<li><a href="#page54">Kristogail Montessori School</a></li>
+	<li><a href="#page55">Learning Circle, Inc.</a></li>
+	<li><a href="#page56">Little Angel Study Center</a></li>
+	<li><a href="#page57">Mondriaan Montessori School</a></li>
+	<li><a href="#page58">Olongapo Adventist Elem. School</a></li>
+	<li><a href="#page59">Olongapo Anglo Cultural School</a></li>
+	<li><a href="#page60">Olongapo City Christian School</a></li>
+	<li><a href="#page61">Olongapo Wesley School</a></li>
+	<li><a href="#page62">Our Lady Penafrancia School</a></li>
+	<li><a href="#page63">San Antonio de Padua Grade School</a></li>
+	<li><a href="#page64">St. Anne Academy</a></li>
+	<li><a href="#page65">St. Joseph's College</a></li>
+	<li><a href="#page66">Subic Montessori School</a></li>
+	<li><a href="#page67">Sunbeam Christian Academy</a></li>
+	<li><a href="#page68">The King's Academy</a></li>
+	<li><a href="#page69">Virgen Delos Remedios College</a></li>
+	<li><a href="#page70">Wesleyan Ecumenical School</a></li>
+	<li><a href="#page71">Wesleyan Kiddie School</a></li>
+	</ul>
+</div>
+
+<div data-role="collapsible" data-theme="a">
+		<h2>COLLEGE SCHOOL</h2>
+
+	<ul data-role="listview">
+	<li><a href="#page72">Comteq Computer and Business College</a></li>
+	<li><a href="#page73">Gordon College</a></li>
+	<li><a href="#page74">Holy Infant Jesus College</a></li>
+	<li><a href="#page75">Metro Subic Colleges</a></li>
+	<li><a href="#page76">Mondriaan Aura College</a></li>
+	<li><a href="#page77">Network Computer and Business Colleges</a></li>
+	<li><a href="#page78">On-Line Data Center Computer School</a></li>
+	<li><a href="#page79">STI College</a></li>
+	<li><a href="#page80">Virgen De Los Remedios College</a></li>
+	</ul>
+</div>
+-->
+	<div data-role="footer" data-position="fixed">
+	<div data-role="navbar">	
+	</div>
+	<li><a href="#mainPage" data-icon="back" data-role="button">BACK</a></li>
+	</div>
+</div>
+
+<!-- Start of Page 3 -->
+<div data-role="page" data-theme="b" id="page3" >
+<p><a href="#pageTwo" data-role="button">Death By</a></p>
+	<p align="center" class="slide">Pick a category of things (animals, colors, breakfast cereals, etc), then go around the room and have everyone add to the list of things alphabetically (e.g. alligator, baboon, camel...).<br>
+	If the kid says "uhh," "umm," or otherwise hesitates before blurting out his answer, that kid has to silently act out a "death by" of your choosing.<br>
+	Sounds a little morbid, but it should be something silly (like "death by homework" or "death by goldfish"), never anything like death by a weapon.<br>
+	The resulting play is generally pretty hilarious (depending on how much the kid gets into it).<br><br><br>
+	
+	The game is meant to be quick-paced, and you can definitely get through a round in 5 minutes.</p>
+</div>
+
+<!-- Start of Page 4 -->
+<div data-role="page" data-theme="b" id="page4" >
+<p><a href="#pageTwo" data-role="button">Wink Murder</a></p>
+	<p align="center" class="slide">Choose one student to be the detective and send them out of the room, then choose a murderer.<br>
+	When the detective comes back and rejoins the class (sitting in a circle), the murderer starts sneakily winking at random students, who then "die" dramatically.<br>
+	The detective has to figure out who is doing the winking.<br>
+	A less morbid one is a rhythm-based one -- same idea with a detective but instead of a murderer, everyone plays a simple beat (knees-clap, knees-clap) and the chosen student surreptitiously changes the beat or the action (eg change to fingersnap-clap-knees).<br>
+	Everyone has to follow their lead and the detective has to work out who is changing the beat.</p>	
+</div>
+
+<!-- Start of Page 5 -->
+<div data-role="page" data-theme="b" id="page5" >
+<p><a href="#pageTwo" data-role="button">Drawing Game</a></p>
+	<p align="center" class="slide">If you have a whiteboard, you can use 3 markers, if not use a chalkboard and 3 pieces of chalk.<br>
+	On the board you write the numbers 1, 2, and 3 near the top.<br>
+	Basically as high as an average child in the classroom can reach while straining.<br>
+	Don't write it at normal writing height.<br><br><br>
+	Space the numbers about 2-3 feet apart.<br>
+	Enough room so 1 kid can stand under a number and have elbow room.<br>
+	You also set up a chair at the opposite end of the room from the boards. <br>
+	Pick a student and sit them in the chair. <br>
+	Turn the chair so the person sitting in the chair looks away from the board.<br>
+	You don't want them to see the ones who you will pick now. <br>
+	Pick 3 kids now. Being silent as to not give away who the child is. <br>
+	(You'll see why) The first kid picked goes to 1, second to 2, third to 3. <br>
+	If you need to point and remind, go ahead. <br>
+	If you use 3 different colored markers, you can write the numbers using a different color.<br>
+	That way,it is obvious who goes where. <br>
+	Okay. So now you have 3 kids up at the board and 1 at the back. <br>
+	You instruct the ones at the board to "Draw a ____." <br>
+	Fill in the blank with your choice! Cat, dog, tree, mouse, etc. Something fast and simple.<br>
+	Give them 30 seconds to draw. When they are finished, they sit down quietly.<br>
+	The person at the back turns around and picks their "favorite." <br>
+	It will not always be the best! Whoever has drawn that picture is the new "judge." <br>
+	From the other two, choose 1 to erase the board (leaving the numbers) and choose the other to pick the 3 next players, waiting of course until the "judge" turns the other way.<br>
+	And you pick something else to draw, and continue on as long as you like!<br><br><br>
+	
+	*Note: You can use the ticket system that is described for Heads Up 7-Up below.<br>
+	Since 3 kids are "used up" each each time, you can quickly go through the whole class.</p>
+	
+</div>
+
+<!-- Start of Page 6 -->
+<div data-role="page" data-theme="b" id="page6" >
+<p><a href="#pageTwo" data-role="button">Heads Up 7-Up!</a></p>
+	<p align="center" class="slide">You know the game. <br>
+	Pick 7 students. 1 is the leader. They come to the front.<br>
+	The leader says, "Heads down, thumbs up."<br>
+	The 7 go around and touch 1 thumb each. <br>
+	Then when all are back to the front, leader calls, "heads up, 7 up." <br>
+	The 7 chosen students stand and one by one are asked to guess who picked them. <br>
+	If they are right, they switch places with 1 being part of the picking students. <br>
+	If they guess wrong, they sit down. <br>
+	After all guess, students reveal who picked who. <br>
+	And it starts again.<br><br><br>
+	*Ticket system: Cut out colored pieces of construction paper, about the size of a raffle ticket. <br>
+	Pass 1 to all students who are not part of the first 7 chosen. <br>
+	Instead of touching a thumb, the 7 students take a ticket. <br>
+	Collect them in a pile or can each round. <br>
+	So, for each round, instruct the group of 7 that they need to pick ones with tickets. <br>
+	They don't need to pick all tickets all the time. <br>
+	Just some tickets all the time.<br>
+	When all tickets are used, each student has had a chance.<br>
+	Pass out the tickets again, and do the same thing. <br>
+	That way, all students get picked, multiple times, no matter what!<br>
+	You can even do 1 extra round after all tickets are gone to give students a free choice if you wish.</p>
+	
+</div>
+  
+<!-- Start of Page 7 -->
+<div data-role="page" data-theme="b" id="page7" >
+<p><a href="#pageTwo" data-role="button">Who is missing?</a></p>
+	<p align="center" class="slide">You pick one student to be "it." <br>
+	They sit in a chair and face away from the class, closing their eyes. <br>
+	You need a closet or cabinet or wall that a student can "hide" behind and not be seen by the person in the chair.<br>
+	You quietly point to a student to "hide." While they are hiding, you count to 10. <br>
+	The rest of the students change desks. At 10, all must sit down.<br>
+	You can speed up the count if you need to maintain the chaos.<br>
+	You then ask the person who is "it" to turn around and guess who is missing. <br>
+	It is actually harder than it seems. Sometimes I found myself forgetting who was hidden. <br>
+	What makes it hard is that all students are mixed up now. If they guess right, they get to stay.<br>
+	The person who was hidden picks the next hider. If they guess wrong, they pick the next student to hide then sit down.<br>
+	You can make a max number of right guesses allowed so a good guesser does not hog it all. I like 3. <br>
+	If they guess 2 in a row, they get to play just one more no matter what. That way, you use up a lot of students and keeps it moving. <br>
+	Again, you can use a modified ticket system to keep track of who has been chosen.</p>
+	
+</div>
+
+  <!-- Start of Page 8 -->
+<div data-role="page" data-theme="b" id="page8" >
+<p><a href="#pageTwo" data-role="button">Four corners</a></p>
+	<p align="center" class="slide">Put the numbers 1 to 4, fairly large on pieces of paper. <br>
+	That is, one number per paper.<br>
+	Tape one paper in each corner of the classroom.<br>
+	Sometimes a cupboard will block the corner, so tape it accordingly.<br>
+	You then have 4 corners, each numbered from 1 to 4. <br>
+	Cut a paper into 4 equal pieces. Put the numbers 1 to 4, one on each piece.<br>
+	Fold them up and put these 4 papers in a box, bag, can, or similar.<br>
+	Now, you tell all students in the class to go to a corner. <br>
+	You pick a number from the bag and read it.<br>
+	All students in that corner must sit down. You tell the class to switch corners. <br>
+	The rule is they cannot stay at the same corner. <br>
+	You count to 10 (or less) and pick another number. <br>
+	Remember to put chosen numbers back in the container. <br>
+	Again, all students at that corner sit down. <br>
+	You keep repeating this until you have 4 or less. <br>
+	When there are 4 or less, on each draw they must switch their corners and they cannot be at the same corner as someone else.<br>
+	Sometimes at the end, you will need to draw a few times as some corners will be empty. <br>
+	Eventually, you will call the last corner with a student in it and the other student will be the only one left--the winner! <br>
+	You can then play again, with the winner picking numbers.<br>
+</p>
+	
+</div>
+
+<!-- Start of Page 9 -->
+<div data-role="page" data-theme="b" id="page9" >
+<p><a href="#pageTwo" data-role="button">Silent ball</a></p>
+	<p align="center" class="slide">Used to be my favorite. <br>
+	You need a nerf ball or very soft ball.<br>
+	Students sit on desks and toss the ball around. <br>
+	If they talk, they are "out" and must sit down. <br>
+	If they drop the ball, throw it so it is uncatchable, or interfere with a throw or a catch, they are out and must sit down. <br>
+	If they drop a cathcable ball, they are also out. <br>
+	Soon, all but 1 student is left as the winner. <br>
+	You can modify this if you wish. <br>
+	One problem is students sitting down get bored.<br>
+	Bored student=loud student. <br>
+	You can have it so nobody gets out, just needs to be quiet.<br>
+	Tossing a ball around in the classroom is its own reward!<br><br><br>
+	You need more rules, however to make it safe: -If you drop the ball, then you ARE THE ONLY student to go and get the ball. <br>
+	-No standing, waving hands, calling out, or other unsafe practices. <br>
+	-You need to keep a handle on this game as it can do some harm to the classroom.</p>
+	
+</div>
+
+<!-- Start of Page 11 -->
+<div data-role="page" data-theme="b" id="page11" >
+<p><a href="#pageTwo" data-role="button">"I love you honey"</a></p>
+	<p align="center" class="slide">One student sits up the front. <br>
+	One at a time students come up and say to them, "I love you honey, won't you please smile?" and the main person replies, "I love you honey, but I just can't smile." <br>
+	The idea is to put on your silliest voice or make your craziest face to make that person smile <br>
+	-- if they do, the asker becomes the main person.</p>
+	
+</div>
+
+<!-- Start of Page 12 -->
+<div data-role="page" data-theme="b" id="page12" >
+<p><a href="#pageTwo" data-role="button">Fruit salad</a></p>
+	<p align="center" class="slide">Everyone sits in a circle in chairs and is allocated a fruit name. <br>
+	There should be two of each fruit, roughly opposite each other. <br>
+	One person stands in the middle and calls out fruit names, one by one. <br>
+	If you're an apple, and the person in the middle calls 'apples!', you have to get up and switch chairs with the other apple before the person in the middle takes their chair. <br>
+	Whoever's left standing becomes the new person in the middle.<br>
+	And at some point, the person in the middle can call 'fruit salad!' and mad seat-grabbing ensues.</p>
+	
+</div>
+
+<!-- Start of Page 13 -->
+<div data-role="page" data-theme="b" id="page13" >
+<p><a href="#pageTwo" data-role="button">Splat!</a></p>
+	<p align="center" class="slide">Kids ranging in age from 4-14.<br>
+
+1. All the kids stand in a circle. One kid goes in the middle: he is the Splatter. <br>
+The Splatter is always right; nobody can argue with the Splatter.<br><br>
+
+2.The Splatter throws an imaginary pie at any kid in the circle and says "splat!"<br>
+This gesture should sort of look like a high-five.<br>
+The Splatter can be slightly tricky about this (turning suddenly so it's unexpected, etc).<br><br>
+
+3.The kid who had the pie thrown at her immediately ducks (so the pie doesn't hit her). She doesn't say anything.<br>
+The two kids on either side of that kid must immediately turn towards each other and throw imaginary pies at each other (over the head of the kid who ducked). <br>
+They must both say "splat!" <br>
+These two reactions (the ducking and the side-splatters' splatting) must be as fast and simultaneous as possible.<br><br>
+
+4.If one of the reactors was slow or made a mistake, then the splatter points at that kid and nicely says "sorry, you're out!" <br>
+You can make up funny nicknames for the mistakes to make the kids laugh.<br>
+ For instance if the wrong kid splats, that's a mistake and you can gently tease them and call them a "happy splatter". <br>
+ If a side-splatter forgets to say splat, they're a "silent splatter". or the ducker doesn't duck, they're a "sleepy splattee", or the ducker says splat, "splatty ducker!" <br>
+ Make it funny so they all giggle.<br>
+No arguing with the splatter, the splatter is always right.<br>
+Not every turn must end with someone going out- if all three reactors are perfect, they can all stay in.<br><br>
+
+5. If you're out, you leave the circle and watch from behind.<br>
+Do not rearrange the circle- leave awkward gaps in it. <br>
+This makes it harder because suddenly the side-splatter might not be directly beside the kid who ducks. <br>
+But the side-splatter must still be the kid "beside" the ducker. <br>
+As more people leave the circle, this might mean the side-splatters are very far away from the ducker, although still technically "beside" them. <br>
+It's tricky!<br><br>
+
+5.5 Continue splatting til only two kids are left.<br>
+Now those two kids must stand back to back.<br>
+Ask all the kids to choose a secret word. Say it's "kangaroo".<br>
+The Splatter begins to tell a made-up story. <br>
+As the story continues, the last two kids slowly walk away from each other, facing back to back.<br>
+They're listening for the secret word.<br>
+The Splatter can be tricky and put in words that sound like the secret word... <br>
+"Once upon a time Johnny went to the zoo and he saw a KKK....koala! And a KKK...cat! And a KKK...Kangaroo!"<br><br>
+
+6.When the Splatter finally says the secret word, the two last kids must immediately spin back to each other and Splat each other! <br>
+Whoever is faster wins the game!</p>
+	
+</div>
+
+<!-- Start of Page 14 
+<div data-role="page" data-theme="a" id="page14" >
+<p><a href="#pageTwo" data-role="button">Gordon Heights I Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107126</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Gordon Heights I ES</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Kauffman St.</strong><br>
+	<strong>Address Barangay: Gordon Heights</strong><br>
+	<strong>School Head: NILDA A. QUITANEG</strong><br>
+	<strong>Designation: Principal IV</strong><br>
+	<strong>Telephone No.: (047) 222-5029</strong><br>
+	<strong>Fax No.: (047) 222-5029</strong><br>
+	<strong>Email: gordonheightsI_elementary@yahoo.com</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT I</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 15
+<div data-role="page" data-theme="a" id="page15" >
+<p><a href="#pageTwo" data-role="button">Gordon Heights I Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107127</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Gordon Heights II ES</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Blk. 19 Long Road</strong><br>
+	<strong>Address Barangay: Gordon Heights</strong><br>
+	<strong>School Head: ELVIRA S. CORPUZ</strong><br>
+	<strong>Designation: Principal I</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT II</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 16 
+<div data-role="page" data-theme="a" id="page16" >
+<p><a href="#pageTwo" data-role="button">Mabayuan Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107128</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Mabayuan ES</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Otero Ave.</strong><br>
+	<strong>Address Barangay: Mabayuan</strong><br>
+	<strong>School Head: REOLITA R. ECURA</strong><br>
+	<strong>Designation: Principal II</strong><br>
+	<strong>Telephone No.: (047) 222-5172</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: mabayuan_1959@yahoo.com</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT II</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 17
+<div data-role="page" data-theme="a" id="page17" >
+<p><a href="#pageTwo" data-role="button">Sta. Rita Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107129</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Sta. Rita ES</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Sta. Rita Rd.</strong><br>
+	<strong>Address Barangay: Sta. Rita</strong><br>
+	<strong>School Head: HERMINIGILDA M. ESCOBAR, Ed.D.</strong><br>
+	<strong>Designation: Principal IV</strong><br>
+	<strong>Telephone No.: (047) 222-2696</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT II</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 18
+<div data-role="page" data-theme="a" id="page18" >
+<p><a href="#pageTwo" data-role="button">Tabacuhan Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107130</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Tabacuhan ES</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Tabacuhan Rd.</strong><br>
+	<strong>Address Barangay: Sta. Rita</strong><br>
+	<strong>School Head: DIALINA J. TANGONAN</strong><br>
+	<strong>Designation: Principal I</strong><br>
+	<strong>Telephone No.: (047) 222-2272</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT II</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 19 
+<div data-role="page" data-theme="a" id="page19" >
+<p><a href="#pageTwo" data-role="button">Banicain Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107131</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Banicain ES</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 1st St.</strong><br>
+	<strong>Address Barangay: Banicain</strong><br>
+	<strong>School Head: REMEDIOS E. CACPAL, Ed.D.</strong><br>
+	<strong>Designation: Principal II</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT III</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 20 
+<div data-role="page" data-theme="a" id="page20" >
+<p><a href="#pageTwo" data-role="button">Barretto I Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107132</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Barretto I ES</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Geronimo St.</strong><br>
+	<strong>Address Barangay: Barretto</strong><br>
+	<strong>School Head: ELVIRA E. SAGUN</strong><br>
+	<strong>Designation: Principal II</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT III</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 21 
+<div data-role="page" data-theme="a" id="page21" >
+<p><a href="#pageTwo" data-role="button">Barretto II Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107133</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Barretto II ES</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Rizal Ext.</strong><br>
+	<strong>Address Barangay: Barretto</strong><br>
+	<strong>School Head: PASTOR Ll. PADUA</strong><br>
+	<strong>Designation: Principal I</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT III</strong><br>
+	</p></center>
+</div>
+   -->
+<!-- Start of Page 22
+<div data-role="page" data-theme="a" id="page22" >
+<p><a href="#pageTwo" data-role="button">James L. Gordon IS Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107134</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: James L. Gordon IS</strong><br>
+	<strong>Old Name: James L. Gordon Memorial School</strong><br>
+	<strong>Address: Foster St.</strong><br>
+	<strong>Address Barangay: New Kababae</strong><br>
+	<strong>School Head: MERLE A. ELLANO</strong><br>
+	<strong>Designation: Principal IV</strong><br>
+	<strong>Telephone No.: (047) 222-4769</strong><br>
+	<strong>Fax No.: (047) 222-4769</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT III</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 23 
+<div data-role="page" data-theme="a" id="page23" >
+<p><a href="#pageTwo" data-role="button">Nellie E. Brown Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107136</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Nellie E. Brown ES</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 6 Davidson St.</strong><br>
+	<strong>Address Barangay: West bajac-Bajac</strong><br>
+	<strong>School Head: VIRGINIA J. MIRA</strong><br>
+	<strong>Designation: Principal II</strong><br>
+	<strong>Telephone No.: (047) 222-5002</strong><br>
+	<strong>Fax No.: (047) 222-5002</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT III</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 24
+<div data-role="page" data-theme="a" id="page24" >
+<p><a href="#pageTwo" data-role="button">Sergia Soriano Esteban IS II Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 162001</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Sergia Soriano Esteban IS II</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Coral Rd.</strong><br>
+	<strong>Address Barangay: Kalaklan</strong><br>
+	<strong>School Head: JOSEFINA T. MACAPAGAL</strong><br>
+	<strong>Designation: Teacher-In-Charge</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT III</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 25
+<div data-role="page" data-theme="a" id="page25" >
+<p><a href="#pageTwo" data-role="button">Sergia Soriano Esteban IS of Kalaklan (Kalaklan Elementary School)</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107135</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name:  Sergia Soriano Esteban IS of Kalaklan (Kalaklan ES)</strong><br>
+	<strong>Old Name: Kalaklan Elementary School</strong><br>
+	<strong>Address: Nat'l. Hi-way</strong><br>
+	<strong>Address Barangay: Kalaklan</strong><br>
+	<strong>School Head: FINA T. FADERA</strong><br>
+	<strong>Designation: Principal II</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT III</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 26
+<div data-role="page" data-theme="a" id="page26" >
+<p><a href="#pageTwo" data-role="button">Asinan Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107137</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Asinan ES</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Gordon Ave.</strong><br>
+	<strong>Address Barangay: New Asinan</strong><br>
+	<strong>School Head: AMALIA M. ABAYAN</strong><br>
+	<strong>Designation: Principal I</strong><br>
+	<strong>Telephone No.: (047) 222-6567</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT IV</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 27
+<div data-role="page" data-theme="a" id="page27" >
+<p><a href="#pageTwo" data-role="button">Ilalim Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107138</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Ilalim ES</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Macaraeg St.</strong><br>
+	<strong>Address Barangay: New Ilalim</strong><br>
+	<strong>School Head: MARCIAL C. MORTERA</strong><br>
+	<strong>Designation: Principal I</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: marcialmortera@yahoo.com</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT IV</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 28
+<div data-role="page" data-theme="a" id="page28" >
+<p><a href="#pageTwo" data-role="button">Kalalake Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107139</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Kalalake ES</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Murphy St.</strong><br>
+	<strong>Address Barangay: New Kalalake</strong><br>
+	<strong>School Head: JOSEFINA T. PAGOT</strong><br>
+	<strong>Designation: Principal IV</strong><br>
+	<strong>Telephone No.: (047) 222-3135</strong><br>
+	<strong>Fax No.: (047) 222-3135</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT IV</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 29
+<div data-role="page" data-theme="a" id="page29" >
+<p><a href="#pageTwo" data-role="button">SPED-Gifted Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107140</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: SPED-Gifted</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: East Kalayaan</strong><br>
+	<strong>Address Barangay: SBFZ</strong><br>
+	<strong>School Head: MARITES A. CALARA, Ed.D.</strong><br>
+	<strong>Designation: Principal II</strong><br>
+	<strong>Telephone No.: (047) 252-6100</strong><br>
+	<strong>Fax No.: (047) 252-6100</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT IV</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 30 
+<div data-role="page" data-theme="a" id="page30" >
+<p><a href="#pageTwo" data-role="button">Tapinac Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 107141</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Tapinac ES</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 13th St.</strong><br>
+	<strong>Address Barangay: East Tapinac</strong><br>
+	<strong>School Head: ANELITA L. DELA TORRE</strong><br>
+	<strong>Designation: Principal III</strong><br>
+	<strong>Telephone No.: (047) 224-9672</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	<strong>District: OLONGAPO CITY DISTRICT IV</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 31 
+<div data-role="page" data-theme="a" id="page31" >
+<p><a href="#pageTwo" data-role="button">Barretto National High School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 301050</strong><br>
+	<strong>Mother School ID: 301050</strong><br>
+	<strong>School Name: Barretto NHS</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Rizal St.</strong><br>
+	<strong>Address Barangay: Barretto</strong><br>
+	<strong>School Head: ESTERLINA E. BERNALES</strong><br>
+	<strong>Designation: Principal II</strong><br>
+	<strong>Telephone No.: (047) 223-9361</strong><br>
+	<strong>Fax No.: (047) 223-9361</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 32 
+<div data-role="page" data-theme="a" id="page32" >
+<p><a href="#pageTwo" data-role="button">City of Olongapo NHS Elementary School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 301051</strong><br>
+	<strong>Mother School ID: 301051</strong><br>
+	<strong>School Name: City of Olongapo NHS</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Rizal Ave.</strong><br>
+	<strong>Address Barangay: East Tapinac</strong><br>
+	<strong>School Head: HELEN B. AGGABAO, Ed.D.</strong><br>
+	<strong>Designation: Principal IV</strong><br>
+	<strong>Telephone No.: (047) 223-3744</strong><br>
+	<strong>Fax No.: (047) 224-8452</strong><br>
+	<strong>Email: ocnhs1946@yahoo.com</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 33
+<div data-role="page" data-theme="a" id="page33" >
+<p><a href="#pageTwo" data-role="button">Gordon Heights NHS</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 301053</strong><br>
+	<strong>Mother School ID: 301053</strong><br>
+	<strong>School Name: Gordon Heights NHS</strong><br>
+	<strong>Old Name: Gordon Heights High School</strong><br>
+	<strong>Address: Keith St.</strong><br>
+	<strong>Address Barangay: Gordon Heights</strong><br>
+	<strong>School Head: DANILA P. MONCADA</strong><br>
+	<strong>Designation: Principal III</strong><br>
+	<strong>Telephone No.: (047) 222-5555</strong><br>
+	<strong>Fax No.: (047) 222-5555</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 34 
+<div data-role="page" data-theme="a" id="page34" >
+<p><a href="#pageTwo" data-role="button">Iram High School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 301055</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Iram HS(Resettlement School)</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Iram</strong><br>
+	<strong>Address Barangay: New Cabalan</strong><br>
+	<strong>School Head: GEMMA F. FLORES</strong><br>
+	<strong>Designation: Principal I</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 35 
+<div data-role="page" data-theme="a" id="page35" >
+<p><a href="#pageTwo" data-role="button">James L. Gordon IS</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 301052</strong><br>
+	<strong>Mother School ID: 301051</strong><br>
+	<strong>School Name: James L. Gordon IS</strong><br>
+	<strong>Old Name: James L. Gordon Mem. School</strong><br>
+	<strong>Address: Foster St.</strong><br>
+	<strong>Address Barangay: New Kababae</strong><br>
+	<strong>School Head: MERLE A. ELLANO</strong><br>
+	<strong>Designation: Principal IV</strong><br>
+	<strong>Telephone No.: (047) 222-4769</strong><br>
+	<strong>Fax No.: (047) 222-4769</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 36 
+<div data-role="page" data-theme="a" id="page36" >
+<p><a href="#pageTwo" data-role="button">Kalalake NHS</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 301056</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Kalalake NHS</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 14 Murphy St.</strong><br>
+	<strong>Address Barangay: New Kalalake</strong><br>
+	<strong>School Head: LEONARDO P. DE GUZMAN</strong><br>
+	<strong>Designation: Principal III</strong><br>
+	<strong>Telephone No.: (047) 222-4186</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: KNHS09@yahoo.com</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+   -->
+<!-- Start of Page 37 
+<div data-role="page" data-theme="a" id="page37" >
+<p><a href="#pageTwo" data-role="button">New Cabalan NHS</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 301057</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: New Cabalan NHS</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Prk. 3 Mabolo St.</strong><br>
+	<strong>Address Barangay: New Cabalan</strong><br>
+	<strong>School Head: SOLEDAD E. POZON, Ed.D.</strong><br>
+	<strong>Designation: Principal II</strong><br>
+	<strong>Telephone No.: (047) 222-3974</strong><br>
+	<strong>Fax No.: (047) 222-3974</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 38
+<div data-role="page" data-theme="a" id="page38" >
+<p><a href="#pageTwo" data-role="button">Old Cabalan High School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 307403</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Old Cabalan High School</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Bennet Rd.</strong><br>
+	<strong>Address Barangay: Old Cabalan</strong><br>
+	<strong>School Head: ROSARIO L. ALBINES</strong><br>
+	<strong>Designation: Principal III</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 39
+<div data-role="page" data-theme="a" id="page39" >
+<p><a href="#pageTwo" data-role="button">Regional Science High School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 301058</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Regional Science HS</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: East Kalayaan</strong><br>
+	<strong>Address Barangay: SBFZ</strong><br>
+	<strong>School Head: LEONIDA A. DANTAY</strong><br>
+	<strong>Designation: Principal III</strong><br>
+	<strong>Telephone No.: (047) 252-6046 / (047) 252-1117</strong><br>
+	<strong>Fax No.: (047) 252-6046 / (047) 252-1117</strong><br>
+	<strong>Email: rshs3sbma@yahoo.com.ph</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 40
+<div data-role="page" data-theme="a" id="page40" >
+<p><a href="#pageTwo" data-role="button">Sergia Soriano Esteban IS II</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 307402</strong><br>
+	<strong>Mother School ID: 301050</strong><br>
+	<strong>School Name: Sergia Soriano Esteban IS II</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Prk. 6 Coral St.</strong><br>
+	<strong>Address Barangay: Kalaklan</strong><br>
+	<strong>School Head: JOSEFINA T. MACAPAGAL</strong><br>
+	<strong>Designation: Master Teacher II</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 41
+<div data-role="page" data-theme="a" id="page41" >
+<p><a href="#pageTwo" data-role="button">Sergia Soriano Esteban IS of Kalaklan</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 307401</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Sergia Soriano Esteban IS of Kalaklan</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Nat'l. Hi-way</strong><br>
+	<strong>Address Barangay: Kalaklan</strong><br>
+	<strong>School Head: FINA T. FADERA</strong><br>
+	<strong>Designation: Principal II</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 42
+<div data-role="page" data-theme="a" id="page42" >
+<p><a href="#pageTwo" data-role="button">Sta. Rita High School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 301054</strong><br>
+	<strong>Mother School ID: 301054</strong><br>
+	<strong>School Name: Sta. Rita HS</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Tulio St.</strong><br>
+	<strong>Address Barangay: Sta. Rita</strong><br>
+	<strong>School Head: RICARDO M. AGGABAO</strong><br>
+	<strong>Designation: Principal I</strong><br>
+	<strong>Telephone No.: (047) 223-7487</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 43
+<div data-role="page" data-theme="a" id="page43" >
+<p><a href="#pageTwo" data-role="button">Aura De laurentus Business HS</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 401366</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Aura De laurentus Business HS</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 2 15th St.</strong><br>
+	<strong>Address Barangay: East Tapinoc</strong><br>
+	<strong>School Head: Aurora G. Geniza, Ed. D.</strong><br>
+	<strong>Designation: Executive School Director</strong><br>
+	<strong>Telephone No.: 222-51-81</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 44
+<div data-role="page" data-theme="a" id="page44" >
+<p><a href="#pageTwo" data-role="button">Bright Star Child Development Center</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 401367</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Bright Star Child Development Center</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: # 4 20th St.</strong><br>
+	<strong>Address Barangay: West Bajac-Bajac</strong><br>
+	<strong>School Head: Mabini M. Espinoza M. D.</strong><br>
+	<strong>Designation: School Administrator</strong>><br>
+	<strong>Telephone No.: 222-43-27</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 45
+<div data-role="page" data-theme="a" id="page45" >
+<p><a href="#pageTwo" data-role="button">Brightfields Montessori School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 422001</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Brightfields Montessori School</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 1860 Rizal Ave.,</strong><br>
+	<strong>Address Barangay: East Bajac-Bajac</strong><br>
+	<strong>School Head: Arlina T. Bertrand</strong><br>
+	<strong>Designation: Principal</strong><br>
+	<strong>Telephone No.: (047) 224-45-65</strong><br>
+	<strong>Fax No.: (047) 224-69-96</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 46
+<div data-role="page" data-theme="a" id="page46" >
+<p><a href="#pageTwo" data-role="button">Christ The King Catholic School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 401368</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Christ The King Catholic School</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Clark St.</strong><br>
+	<strong>Address Barangay: Sta. Rita</strong><br>
+	<strong>School Head: Rev. Fr. Nelson C. Vencilas</strong><br>
+	<strong>Designation: School Director</strong><br>
+	<strong>Telephone No.: 	(047) 223-75-64</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 47
+<div data-role="page" data-theme="a" id="page47" >
+<p><a href="#pageTwo" data-role="button">Christian Baptist Academy</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401369		</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Christian Baptist Academy</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Gorners Keith & Acacia St.</strong><br>
+	<strong>Address Barangay: Gordon Heights</strong><br>
+	<strong>School Head: Mts. Rebelyn Dela Paz</strong><br>
+	<strong>Designation: School Administrator</strong><br>
+	<strong>Telephone No.: 223-88-43</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 48
+<div data-role="page" data-theme="a" id="page48" >
+<p><a href="#pageTwo" data-role="button">Columban College-Asinan</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401370</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Columban College-Asinan</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: # 1 Mt. Apo St.</strong><br>
+	<strong>Address Barangay: East Tapinac</strong><br>
+	<strong>School Head: Msgr. Crisostomo A. Cacho</strong><br>
+	<strong>Designation: School President</strong><br>
+	<strong>Telephone No.: (047) 222-33-29</strong><br>
+	<strong>Fax No.: (047) 222-77-82</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 49
+<div data-role="page" data-theme="a" id="page49" >
+<p><a href="#pageTwo" data-role="button">Columban College-Barretto</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401371</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Columban College-Barretto</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Rizal St.</strong><br>
+	<strong>Address Barangay: Bo. Barretto</strong><br>
+	<strong>School Head: Clarita C. Consul</strong><br>
+	<strong>Designation: Principal</strong><br>
+	<strong>Telephone No.: 224-51-01</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 50
+<div data-role="page" data-theme="a" id="page50" >
+<p><a href="#pageTwo" data-role="button">F.I.R.S.T Child LearningCenter (Freeprot Institute for Research Science & Tech.)</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 107118</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: F.I.R.S.T Child LearningCenter (Freeprot Institute for Research Science & Tech.)</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Bldg. Q 7931 A & B</strong><br>
+	<strong>Address Barangay: Subcom Area</strong><br>
+	<strong>School Head: Soledad M. Catli</strong><br>
+	<strong>Designation: School Administrator</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 51
+<div data-role="page" data-theme="a" id="page51" >
+<p><a href="#pageTwo" data-role="button">Heaven Sent Tutorial and Learning Center</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 422002</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Heaven Sent Tutorial and Learning Center</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 103 Kessing St.</strong><br>
+	<strong>Address Barangay: New Kalalake</strong><br>
+	<strong>School Head: Imelda P. Soriano</strong><br>
+	<strong>Designation: Directress</strong><br>
+	<strong>Telephone No.: 224-22-75</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+   -->
+<!-- Start of Page 52
+<div data-role="page" data-theme="a" id="page52" >
+<p><a href="#pageTwo" data-role="button">Holy Infant Jesus College</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401372</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Holy Infant Jesus College</strong><br>
+	<strong>Old Name: Holy Infant Study Center</strong><br>
+	<strong>Address: Mayumi St.</strong><br>
+	<strong>Address Barangay: Sta. Rita</strong><br>
+	<strong>School Head: Erlinda G. Crispin</strong><br>
+	<strong>Designation: Principal</strong><br>
+	<strong>Telephone No.: 222-69-65</strong><br>
+	<strong>Fax No.: 222-49-07</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+  <!-- Start of Page 53
+<div data-role="page" data-theme="a" id="page53" >
+<p><a href="#pageTwo" data-role="button">Jireh Christian Academy</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401373</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Jireh Christian Academy</strong><br>
+	<strong>Old Name: Jireh Christian Nursery & Kindergarten Sch.</strong><br>
+	<strong>Address: 59 Fendler</strong><br>
+	<strong>Address Barangay: East Tapinac</strong><br>
+	<strong>School Head: Pastor Jihan Ry Senina</strong><br>
+	<strong>Designation: Pastor</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 54
+<div data-role="page" data-theme="a" id="page54" >
+<p><a href="#pageTwo" data-role="button">Kristogail Montessori School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 422006</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Kristogail Montessori School</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 31 Simpson St.</strong><br>
+	<strong>Address Barangay: Gordon Heights</strong><br>
+	<strong>School Head: Mrs. Dinia S. Navarro</strong><br>
+	<strong>Designation: Director</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 55
+<div data-role="page" data-theme="a" id="page55" >
+<p><a href="#pageTwo" data-role="button">Learning Circle, Inc.</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401374</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Learning Circle, Inc.</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 31 Simpson St.</strong><br>
+	<strong>Address Barangay: Gordon Heights</strong><br>
+	<strong>School Head: Mrs. Dinia S. Navarro</strong><br>
+	<strong>Designation: Director</strong><br>
+	<strong>Telephone No.: (047) 222-89-65</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 56
+<div data-role="page" data-theme="a" id="page56" >
+<p><a href="#pageTwo" data-role="button">Little Angel Study Center</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401375</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Little Angel Study Center</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 32 3rd St.</strong><br>
+	<strong>Address Barangay: West Tapinac</strong><br>
+	<strong>School Head: Amadeo M. Limpin</strong><br>
+	<strong>Designation: Principal</strong><br>
+	<strong>Telephone No.: 224-54-91</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 57
+<div data-role="page" data-theme="a" id="page57" >
+<p><a href="#pageTwo" data-role="button">Mondriaan Montessori School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401376</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Mondriaan Montessori School</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 9 Dela Cruz Drive Ext.</strong><br>
+	<strong>Address Barangay: East Tapinac</strong><br>
+	<strong>School Head: Aurora G. Geniza, Ed. D.</strong><br>
+	<strong>Designation: Executive School Director</strong><br>
+	<strong>Telephone No.: 222-51-81</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 58
+<div data-role="page" data-theme="a" id="page58" >
+<p><a href="#pageTwo" data-role="button">Olongapo Adventist Elem. School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401378</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Olongapo Adventist Elem. School</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Balic-Balic</strong><br>
+	<strong>Address Barangay: Sta. Rita</strong><br>
+	<strong>School Head: Susan R. Garalde</strong><br>
+	<strong>Designation: Head Teacher</strong><br>
+	<strong>Telephone No.: 223-52-12 / 0920-742-40-22</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 59
+<div data-role="page" data-theme="a" id="page59" >
+<p><a href="#pageTwo" data-role="button">Olongapo Anglo Cultural School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401379</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Olongapo Anglo Cultural School</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: # 5 Arthur St.</strong><br>
+	<strong>Address Barangay: W.B.B</strong><br>
+	<strong>School Head: Mrs. Fredezwinda E. Uy</strong><br>
+	<strong>Designation: Head Teacher , English Department</strong><br>
+	<strong>Telephone No.: (047) 222-51-32</strong><br>
+	<strong>Fax No.: (047) 223-54-28</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 60 
+<div data-role="page" data-theme="a" id="page60" >
+<p><a href="#pageTwo" data-role="button">Olongapo City Christian School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401380</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Olongapo City Christian School</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 5 JL Gordon Ave.</strong><br>
+	<strong>Address Barangay: East Bajac Bajac</strong><br>
+	<strong>School Head: Teodoro D. Del Rosario</strong><br>
+	<strong>Designation: Chairman - Director</strong><br>
+	<strong>Telephone No.: (047) 223-10-92</strong><br>
+	<strong>Fax No.: (047) 223-10-92</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 61
+<div data-role="page" data-theme="a" id="page61" >
+<p><a href="#pageTwo" data-role="button">Olongapo Wesley School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 401381</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Olongapo Wesley School</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: # 890 Rizal Ave.,</strong><br>
+	<strong>Address Barangay: East Tapinac</strong><br>
+	<strong>School Head: Dr. Arsenia R. Tangiday</strong><br>
+	<strong>Designation: School Director</strong><br>
+	<strong>Telephone No.: 222-27-01</strong><br>
+	<strong>Fax No.: 223-28-04</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 62
+<div data-role="page" data-theme="a" id="page62" >
+<p><a href="#pageTwo" data-role="button">Our Lady Penafrancia School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401382</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Our Lady Penafrancia School</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Blk. 22 Waterdam Road</strong><br>
+	<strong>Address Barangay: Gordon Height</strong><br>
+	<strong>School Head: Rodolfo C. Torres</strong><br>
+	<strong>Designation: School Director</strong><br>
+	<strong>Telephone No.: 223-89-43 / 0919-809-66-97</strong><br>
+	<strong>Fax No.: 224-80-39</strong><br>
+	<strong>Email: penafrancia-94@yahoo.com</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 63
+<div data-role="page" data-theme="a" id="page63" >
+<p><a href="#pageTwo" data-role="button">San Antonio de Padua Grade School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2009-2010</u></strong></p>
+	<center><p><strong>School ID: 401384</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: San Antonio de Padua Grade School</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 23 Virginia St.</strong><br>
+	<strong>Address Barangay: Lower Kalaklan</strong><br>
+	<strong>School Head: Mr. Anthony Ian L. Santos</strong><br>
+	<strong>Designation: Administrator</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 64
+<div data-role="page" data-theme="a" id="page64" >
+<p><a href="#pageTwo" data-role="button">St. Anne Academy</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401385</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: St. Anne Academy</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: -</strong><br>
+	<strong>Address Barangay: Gordon Heights</strong><br>
+	<strong>School Head: Mrs. Virginia S. Santos</strong><br>
+	<strong>Designation: Principal</strong><br>
+	<strong>Telephone No.: 223-86-07</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 65
+<div data-role="page" data-theme="a" id="page65" >
+<p><a href="#pageTwo" data-role="button">St. Joseph's College</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401386</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: St. Joseph's College</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: Elicano Corner 18th St.</strong><br>
+	<strong>Address Barangay: East Bajac-Bajac</strong><br>
+	<strong>School Head: Rev, Fr, Hanival G. Brucelas</strong><br>
+	<strong>Designation: College President</strong><br>
+	<strong>Telephone No.: (047) 223-53-68</strong><br>
+	<strong>Fax No.: (047) 223-47-19</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 66
+<div data-role="page" data-theme="a" id="page66" >
+<p><a href="#pageTwo" data-role="button">Subic Montessori School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 422007</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Subic Montessori School</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 737 Labitan St.</strong><br>
+	<strong>Address Barangay: Central Business</strong><br>
+	<strong>School Head: Romeo G. Maningning Jr.</strong><br>
+	<strong>Designation: Chief, Operation Officer</strong><br>
+	<strong>Telephone No.: (047) 252-35-55</strong><br>
+	<strong>Fax No.: (047) 252-35-56</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 67
+<div data-role="page" data-theme="a" id="page67" >
+<p><a href="#pageTwo" data-role="button">Sunbeam Christian Academy</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401387</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Sunbeam Christian Academy</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 24 Gordon Ave.</strong><br>
+	<strong>Address Barangay: New Asinan</strong><br>
+	<strong>School Head: Ptr. Oliver E. Mesiano</strong><br>
+	<strong>Designation: Administrator</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 68
+<div data-role="page" data-theme="a" id="page68" >
+<p><a href="#pageTwo" data-role="button">The King's Academy</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401388</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: The King's Academy</strong><br>
+	<strong>Old Name: Operated by the King's Filam Home, Inc.</strong><br>
+	<strong>Address: 16 Coral St.</strong><br>
+	<strong>Address Barangay: Gordon Heights</strong><br>
+	<strong>School Head: Mrs. Merlina A. Andrade</strong><br>
+	<strong>Designation: Administrator</strong><br>
+	<strong>Telephone No.: (047) 224-36-17</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 69
+<div data-role="page" data-theme="a" id="page69" >
+<p><a href="#pageTwo" data-role="button">Virgen Delos Remedios College</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 401389</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Virgen Delos Remedios College</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 10 Fontaine St.</strong><br>
+	<strong>Address Barangay: East Bajac-Bajac</strong><br>
+	<strong>School Head: Myrna M. Dial, Ph. D.</strong><br>
+	<strong>Designation: School Principal</strong><br>
+	<strong>Telephone No.: (047) 224-86-75</strong><br>
+	<strong>Fax No.: (047) 224-86-75</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 70
+<div data-role="page" data-theme="a" id="page70" >
+<p><a href="#pageTwo" data-role="button">Wesleyan Ecumenical School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 422005</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Wesleyan Ecumenical School</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 14 Jolo St.</strong><br>
+	<strong>Address Barangay: Bo. Barretto</strong><br>
+	<strong>School Head: Soledad V. Ganaden</strong><br>
+	<strong>Designation: Chairperson, BOT</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 71
+<div data-role="page" data-theme="a" id="page71" >
+<p><a href="#pageTwo" data-role="button">Wesleyan Kiddie School</a></p>
+	<p align="center" class="slide"><strong><u>SCHOOL YEAR 2008-2009</u></strong></p>
+	<center><p><strong>School ID: 422009</strong><br>
+	<strong>Mother School ID: 000000</strong><br>
+	<strong>School Name: Wesleyan Kiddie School</strong><br>
+	<strong>Old Name: -</strong><br>
+	<strong>Address: 1607 Balic-Balic</strong><br>
+	<strong>Address Barangay: Sta. Rita</strong><br>
+	<strong>School Head: Mrs. Dinia S. Navarro</strong><br>
+	<strong>Designation: Kindergarten, Committee Chairperson</strong><br>
+	<strong>Telephone No.: none</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Email: none</strong><br>
+	<strong>Region: REGION III - CENTRAL LUZON</strong><br>
+	<strong>Division: OLONGAPO CITY</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 72
+<div data-role="page" data-theme="a" id="page72" >
+<p><a href="#pageTwo" data-role="button">Comteq Computer and Business College</a></p>
+	<p align="center" class="slide"><strong><u>Mr. Conrado B. Joaquin – President</u></strong></p>
+	<center><p><strong>Address:	Bldg-8722 Tabing Ilog Road, Subcom Area, SBMA, Olongapo City, Zambales</strong><br>
+	<strong>Email Add:	comteq@subictel.com</strong><br>
+	<strong>Phone No:	(047) 252-3335</strong><br>
+	<strong>Fax No:	(047) 252-3335</strong><br>
+	<strong>Established:	1997</strong><br>
+	<strong>Region:	Central Luzon</strong><br>
+	<strong>Courses:</strong><br>
+	<strong>Bachelor of Science in Computer Science<br>
+			Bachelor of Science in Information Management<br>
+			Bachelor of Science in Information Technology<br>
+			Associate in Computer Technology<br>
+			Computer Science G.P. No. BOR 189 s. 2002 -<br>
+			Computer Secretarial<br>
+			Electronics & Computer Technology<br>
+			Electronics Technology G.P. No. BOR6 s. 1987 -<br>
+			Computer Based Accountancy G.P. No. BOR 100 s. 2001 -<br>
+			Computer Graphics, Multimedia & 3D Animation G.P. No. BOR 100 s. 2001 -<br>
+			Computer Hardware Technology G.P. No. s. 2001 -<br>
+			Computer Programming G.P. No. BOR 163 s. 2002 -<br>
+			Industrial Electricity<br>
+			Web Authoring G.P. No. s. 2001 -<br>
+			Web Design & Development<br>
+	</strong><br>
+
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 73 
+<div data-role="page" data-theme="a" id="page73" >
+<p><a href="#pageTwo" data-role="button">Gordon College</a></p>
+	<p align="center" class="slide"><strong><u>Hon. Katherine H. Gordon – President</u></strong></p>
+	<center><p><strong>Address:	East Tapinac, Olongapo City, Zambales</strong><br>
+	<strong>Email Add:	occ_admin@subicnet.com</strong><br>
+	<strong>Phone No:	(047) 224-2088</strong><br>
+	<strong>Fax No:	(047) 224-2089</strong><br>
+	<strong>Established:	1999</strong><br>
+	<strong>Region:	Central Luzon</strong><br>
+	<strong>Location:	Zambales</strong><br>
+	<strong>Courses:</strong><br>
+	<strong>B.S. in Accountancy G.P. No. BOR 9 s. 1988 -<br>
+			B.S. in Business Administration<br>
+			B.S. in Hotel & Restaurant Management G.P. No. s. 1996 -<br>
+			B.S. in Information Management G.R. No. s. 1995 – CCO<br>
+			B.S. in Information Technology G.R. No. s. 1995 – CCO<br>
+			B.S. in Nursing G.R. No. BR 03 S. 94 s. 1998 – BOT<br>
+			Bachelor of Science in Computer Science G.R. No. s. 1969 – DCO<br>
+			Associate in Computer Technology G.P. No. BOR 100 s. 2001 -<br>
+			Graduate of Midwifery G.P. No. s. 1956 – DCO<br>
+	</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 74
+<div data-role="page" data-theme="a" id="page74" >
+<p><a href="#pageTwo" data-role="button">Holy Infant Jesus College</a></p>
+	<p align="center" class="slide"><strong><u>Dr. Antonio M. Crispin – President</u></strong></p>
+	<center><p><strong>Address:	Mayumi St., Sta. Rita, Olongapo City, Zambales</strong><br>
+	<strong>Email Add:	hijc@hvisions.com</strong><br>
+	<strong>Phone No:	(047) 222-4907</strong><br>
+	<strong>Fax No:	(047) 222-4907</strong><br>
+	<strong>Established:	1999</strong><br>
+	<strong>Region:	Central Luzon</strong><br>
+	<strong>Location:	Zambales</strong><br>
+	<strong>Courses:</strong><br>
+	<strong>Academic Programs<br>
+			B.S. Commerce<br>
+			B.S. Criminology<br>
+			B.S. in Computer Science<br>
+			Bachelor of Arts<br>
+			Bachelor of Elementary Education<br>
+			Bachelor of Secondary Education<br>
+	</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 75 
+<div data-role="page" data-theme="a" id="page75" >
+<p><a href="#pageTwo" data-role="button">Metro Subic Colleges</a></p>
+	<p align="center" class="slide"><strong><u>Dr. Teresita O. Oliver – College Dean</u></strong></p>
+	<center><p><strong>Address:	East Tapinac, Sta. Rita, Olongapo City, Zambales</strong><br>
+	<strong>Email Add:	-</strong><br>
+	<strong>Phone No:	(047) 223–7875</strong><br>
+	<strong>Phone No:	(047) 223–7875</strong><br>
+	<strong>Established:	1993</strong><br>
+	<strong>Region:	Central Luzon</strong><br>
+	<strong>Location:	Zambales</strong><br>
+	<strong>Courses:</strong><br>
+	<strong>Bachelor of Science in Nursng G.R. No. SB Res.37 s. 1997 – LGU<br>
+			Bachelor of Science in Radiologic Technology G.R. No. s. – LGU<br>
+			Associate in Health Science Education G.R. No. SB Res.37 s. 1997 – LGU<br>
+			Midwifery G.R. No. SB Res.37 s. 1997 – LGU<br>
+			Nursing Aide G.R. No. SB Res.37 s. 1997 – LGU<br>
+	</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 76 
+<div data-role="page" data-theme="a" id="page76" >
+<p><a href="#pageTwo" data-role="button">Mondriaan Aura College</a></p>
+	<p align="center" class="slide"><strong><u>Dr. Edgar G. Geniza – President</u></strong></p>
+	<center><p><strong>Address:	22-14th Street, East Tapinac,SBFZ, Olongapo City, Zambales</strong><br>
+	<strong>Email Add:	aura@svisp.com</strong><br>
+	<strong>Phone No:	(047) 252-3808</strong><br>
+	<strong>Fax No:	(047) 252-3801</strong><br>
+	<strong>Established:	1993</strong><br>
+	<strong>Region:	Central Luzon</strong><br>
+	<strong>Location:	Zambales</strong><br>
+	<strong>Courses:</strong><br>
+	<strong>Master of Arts G.R. No. HER 016 s. 2005 – CRO<br>
+			Master of Management G.R. No. HER 005 s. 2004 – CRO<br>
+			18 Units Professional Education G.R. No. HER 009 s. 2004 – CRO<br>
+			B.S. in Accountancy not indicated<br>
+			B.S. in Business Administration G.R. No. 03-003 s. 1998 – TES<br>
+			B.S. in Computer Engineering G.R. No. 03-005 s. 1998 – TES<br>
+			B.S. in Computer Science G.R. No. 03-007 s. 1998 – TES<br>
+			B.S. in Industrial Engineering G.R. No. 03-004 s. 1998 – TES<br>
+			B.S. in Psychology G.P. No. 039 s. 2001 – CRO<br>
+			Bachelor of Arts G.R. No. N/A s. N/A – N/A<br>
+			BEED G.P. No. HET-002 s. 2004 – CRO<br>
+			BSED G.R. No. HER 017 s. 2005 – CRO<br>
+			Associate in Accountancy G.R. No. HER 006 s. 2004 – CRO<br>
+			Associate In Architectural Design & Tech. G.P. No. 467 s. 1949 – DCO<br>
+			Associate in Computer Secretarial G.P. No. 111 s. 1946 – DCO<br>
+			Associate in Computer Technology G.P. No. HET 116 s. 2004 – CRO<br>
+			Associate in Hotel & Restaurant Management G.R. No. 03-002 s. 1998 – TES<br>
+	</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 77 
+<div data-role="page" data-theme="a" id="page77" >
+<p><a href="#pageTwo" data-role="button">Network Computer and Business Colleges</a></p>
+	<p align="center" class="slide"><strong><u>Mr. Alexander C. Nozuelo – President</u></strong></p>
+	<center><p><strong>Address:	No. 32 18th Street, SBFZ, East Bajac-Bajac, Olongapo City, Zambales</strong><br>
+	<strong>Email Add:	ncbc_pcf@yahoo.com</strong><br>
+	<strong>Phone No:	(047) 222-3912; 252-3961</strong><br>
+	<strong>Fax No: -</strong><br>
+	<strong>Established:	1993</strong><br>
+	<strong>Region:	Central Luzon</strong><br>
+	<strong>Location:	Zambales</strong><br>
+	<strong>Courses:</strong><br>
+	<strong>Bachelor of Science in Business Administration G.R. No. 311 s. 1998 – 4<br>
+			Bachelor of Science in Computer Science G.R. No. 310 s. 1998 – 4<br>
+			Bachelor of Science in Information Technology G.R. No. 032 s. 1996 – CRO<br>
+			Ass. In Business Administration G.R. No. HER 014 s. 2003 – CRO<br>
+			Ass. In Computer Secretarial G.R. No. 030 s. 1996 – CRO<br>
+			ASSOCIATE IN COMPUTER SCIENCE G.R. No. S-011 s. 1995 – DRO<br>
+			Associate In Information Technology G.R. No. S-042 s. 1995 – DRO<br>
+			One-Year Computer Secretarial G.R. No. S-042 s. 1995 – DRO<br>
+			One-Year Computer Technology G.R. No. 033 s. 1996 – CRO<br>
+			Two-Year Junior Secretarial Course G.R. No. 035 s. 1996 – CRO<br>
+			One-Year Computer Programming Tech. G.R. No. 034 s. 1996 – CRO<br>
+			One-Year Computer Technician G.R. No. 113 s. 2000 – CRO<br>
+			Two-Year Small Business Management and Computer Tech. G.R. No. HER 015 s. 2003 – CRO<br>
+			</strong><br>
+	</p></center>
+</div>
+ -->
+<!-- Start of Page 78
+<div data-role="page" data-theme="a" id="page78" >
+<p><a href="#pageTwo" data-role="button">On-Line Data Center Computer School</a></p>
+	<p align="center" class="slide"><strong><u>Eng’r. Jose S. Quirante – President</u></strong></p>
+	<center><p><strong>Address:	No. 48 Gordon Avenue, Pag-Asa, Olongapo City, Zambales</strong><br>
+	<strong>Email Add:	online48@yahoo.com</strong><br>
+	<strong>Phone No:	(047) 222-3136</strong><br>
+	<strong>Fax No:	(047) 222-3964</strong><br>
+	<strong>Established:	1991</strong><br>
+	<strong>Region:	Central Luzon</strong><br>
+	<strong>Location:	Zambales</strong><br>
+	<strong>Courses:</strong><br>
+	<strong>COMPUTER ENGINEERING COURSE G.R. No. BOR 16 s. 1998 – OP<br>
+			COMPUTER SCIENCE G.R. No. BOT 16 s. 1998 – OP<br>
+			COMPUTER SECRETARIAL COURSE G.R. No. BOT 08 s. 1986 – OP<br>
+			JUNIOR SECRETARIAL COURSE G.R. No. BOT 479 s. 1977 – OP<br>
+	</strong><br>
+	</p></center>
+</div>
+-->
+<!-- Start of Page 79
+<div data-role="page" data-theme="a" id="page79" >
+<p><a href="#pageTwo" data-role="button">STI College</a></p>
+	<p align="center" class="slide"><strong><u>Eng'r. Jesus S. Nicdao – Prersident</u></strong></p>
+	<center><p><strong>Address:	G/F True Value Bldg., 2043 Rizal St., West Tapinac, East Bajac-Bajac, Olongapo City, Zambales</strong><br>
+	<strong>Email Add:	olongapo@sti-gapo.edu.ph</strong><br>
+	<strong>Phone No:	(047) 222-4312</strong><br>
+	<strong>Fax No:	(047) 222-4814</strong><br>
+	<strong>Established: 1991</strong><br>
+	<strong>Region:	Central Luzon</strong><br>
+	<strong>Location:	Zambales</strong><br>
+	<strong>Courses:</strong><br>
+	<strong>B.S. in Computer Science G.R. No. 1957 s. 4 -<br>
+			Associate in Computer Technology G.R. No. HER 048 s. 1981 – CRO<br>
+			Associate in Office Management G.R. No. HER 047 s. 1981 – CRO<br>
+			Associate in Computer Programming G.R. No. 136 s. 1966 – 4<br>
+			Certificate in Clipper Pro++ G.R. No. HER 025 s. 1985 – CRO<br>
+			Certificate in Computer Programming G.R. No. HER 025 s. 1985 – CRO<br>
+			Certificate in Computer Technician G.R. No. HER 102 s. 1983 – CRO<br>
+			Certificate in Cyber Programming G.R. No. HER 025 s. 1985 – CRO<br>
+			Certificate in Information Systems G.P. No. HET 095 s. 2002 -<br>
+			Certificate in MS Office 97 Training Program G.R. No. HER 047 s. 1981 – CRO<br>
+			Diploma in Computer and Electronics Technology G.R. No. HER 025 s. 1985 – CRO<br>
+	</strong><br>
+	</p></center>
+</div>
+-->
+<!-- Start of Page 80 
+<div data-role="page" data-theme="a" id="page80" >
+<p><a href="#pageTwo" data-role="button">Virgen De Los Remedios College</a></p>
+	<p align="center" class="slide"><strong><u>Ms. Remedios M. Dela Peña – President</u></strong></p>
+	<center><p><strong>Address:	No. 10 Fontaine St., East Bajac-Bajac, Olongapo City, Zambales</strong><br>
+	<strong>Email Add:	-</strong><br>
+	<strong>Phone No:	(047) 222-3045</strong><br>
+	<strong>Fax No:	(047) 222-7649</strong><br>
+	<strong>Established:	1983</strong><br>
+	<strong>Region:	Central Luzon</strong><br>
+	<strong>School Head: ANTONIO V. EDQUIBA</strong><br>
+	<strong>Location:	Zambales</strong><br>
+	<strong>Courses:</strong><br>
+	<strong>Fax No.: none</strong><br>
+	<strong>Ed.D. G.R. No. 194 s. 1951 – DCO<br>
+			Ph.D. G.R. No. 187 s. 1960 – DCO<br>
+			Master of Arts in Education G.R. No. 358 s. 1963 – DCO<br>
+			MBM G.R. No. 328 s. 1968 – DCO<br>
+			MPM G.R. No. 20 s. 1955 – DCO<br>
+			AB G.R. No. 20 s. 1955 – DCO<br>
+			Bachelor of Science in Computer Science G.R. No. 358 s. 1963 – DCO<br>
+			BEED G.R. No. 358 s. 1963 – DCO<br>
+			BS Criminology G.R. No. 358 s. 1963 – DCO<br>
+			BS in Computer Engineering. G.R. No. 051 s. 1983 – DCO<br>
+			BSA G.R. No. 051 s. 1983 – DCO<br>
+			BSBA G.R. No. 051 s. 1983 – DCO<br>
+			BSCA G.R. No. 20 s. 1955 – DCO<br>
+			BSED G.R. No. 20 s. 1955 – DCO<br>
+			Computer Secretarial G.R. No. 20 s. 1955 – DCO<br>
+	</strong><br>
+	</p></center>
+</div>-->
+</body>
+</html>

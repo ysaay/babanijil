@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=.45, maximum-scale=.45, user-scalable=no">
+	<meta charset=utf-8>
+	<title>Animalania</title>
+	<link href="css/una.css" rel="stylesheet" type="text/css">
+	<link href="css/second.css" rel="stylesheet" type="text/css" >
+	<link rel="stylesheet" href="css/matchgame.css" />
+			
+	<style type="text/css">
+	body{
+	background-attachment:fixed;
+	background-size: cover;
+	background-position:center;
+	}
+	#menu{
+	margin-top: 50px;
+	}
+	#menu img{
+	text-align:center;
+	margin: 0 auto;
+	}
+	.auto-style3 {
+		color: #000000;
+	}
+	.auto-style4 {
+		font-size: x-large;
+	}
+	.auto-style5 {
+	margin-top: 1px;
+}
+	.auto-style6 {
+	font-size: x-large;
+	margin-left: 61px;
+}
+	</style>
+	
+<script>
+// a global object to hold all global variables related to the game.
+var matchingGame = {};
+
+// store the counting elapsed time.
+matchingGame.savingObject.currentElapsedTime = 0;
+
+
+function cleartime()
+{	// stop the timer 
+	clearInterval(matchingGame.timer);
+	// reset the elapsed time to 0.
+	matchingGame.elapsedTime = 0;
+	}
+
+</script>
+			
+</head>
+<body>
+	<header>
+		<br><br><br><br><br><br><br>
+	</header>
+
+	
+	<div id="timer">
+		<span class="auto-style3">
+		<label id="times" ><span class="auto-style4">Elapsed time: </span> </label> 
+		<span id="elapsed-time" class="auto-style4">00:00</span></span>
+		<br><br><br><br>
+	</div>
+	
+
+	
+	
+	<section id="game">		
+		<div id="cards">			
+			<div class="card">
+				<div class="face front"></div>
+				<div class="face back"></div>
+			</div> <!-- .card -->						
+		</div> <!-- #cards -->
+		<br>
+	</section> <!-- #game -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<section id="popup" class="hide">
+		<div id="popup-bg">
+		</div>
+		
+		<div id="popup-box">
+			<div class="ribbon hide">				
+				<div class="ribbon-body">
+					<span>New Record</span>
+				</div>			
+				<div class="triangle"></div>	
+			</div>		
+			<div id="popup-box-content">
+				<h1>You Won!</h1>				
+				<p>Your Score:</p>
+				<p><span class='score'>13</span></p>
+				<a href="game1.html">NEXT LEVEL </a>
+				<p><small>Last Score: <span class='last-score'>20</span><br>
+				Saved on: <span class='saved-time'>13/4/2011 3:14pm</span></small></p>
+			</div>
+		</div>
+	</section>
+
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>
+	
+	</p>
+	<p>&nbsp;</p>
+	<div class="auto-style5" >
+
+
+		
+		
+		<a href="index.html" onclick="cleartime();"> 
+		<img src="images/menu.png" alt="back" class="auto-style6" height="167" style="float: left" width="649" /></a></div>	
+
+<script src="js/jquery-1.6.min.js"></script>
+<script src="js/html5games.matchgame.js"></script>
+</body>
+</html>

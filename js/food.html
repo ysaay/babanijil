@@ -1,0 +1,2243 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="en-ph" http-equiv="Content-Language">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
+		<meta name="viewport" content="width=device-width, initial-scale=.45, maximum-scale=.45, user-scalable=no">
+<title>FOOD FOR ME</title>
+<style type="text/css">
+body {
+	background-image: url('images/bg.png');
+	background-repeat: no-repeat;
+}
+
+#picOne, #picTwo, #picThree {
+position:absolute;
+display: none;
+}
+  
+.auto-style1 {
+	text-align: center;
+}
+  
+.auto-style2 {
+	text-align: center;
+	font-family: "Cooper Black";
+	font-size: x-large;
+	color: #FFFFFF;
+}
+input {
+	font-family: "Century Gothic";
+	font-size: large;
+	font-weight: bold;
+}
+  
+.auto-style3 {
+	margin-top: 0px;
+}
+  
+.auto-style4 {
+	margin-top: 3px;
+	text-align: center ;
+}
+  
+.auto-style5 {
+	margin-left: 10px;
+}
+    
+.auto-style6 {
+	text-align: right;
+}
+    
+.auto-style7 {
+	margin-bottom: 0px;
+}
+    
+.auto-style8 {
+	margin-left: 0px;
+}
+.auto-style9 {
+	margin-top: 57px;
+	margin-left: 87px;
+}
+.auto-style10 {
+	margin-top: 0px;
+	margin-left: 114px;
+}
+    
+</style>
+<script src="jquery-1.4.4.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" >
+var questnum = 1;
+var ans;
+var score = 0;
+var life = 0;
+
+$(document).ready(function() { 
+document.getElementById("quest").hidden = true; 
+});
+
+function check_a()
+{   
+	if (questnum==10)
+	{
+	clearInterval(timer);
+	document.getElementById("myProgress").hidden=true;
+	$('#quest').fadeOut(1);
+	$('#pics').fadeOut(1);
+	document.getElementById ("sc").innerHTML = "Your score: "+score;
+	document.getElementById ('gameover').hidden = false;
+	document.getElementById ('back').hidden = false;
+	document.getElementById ('gameover').src = "images/gameover.png";
+	document.getElementById ('back').src = "images/back.png";
+	}
+	
+	ans = document.getElementById ("Button1").value;
+	if(ans=="rabbit"){score=score+1;}
+		else if(ans=="rat"){score=score+1;}
+	else if(ans=="bee"){score=score+1;}
+	else if(ans=="pig"){score=score+1;}
+	else if(ans=="eagle"){score=score+1;}
+	else if(ans=="bird"){score=score+1;}
+		else if(ans=="lion"){score=score+1;}
+	else{score=score;life=life+1;}
+	document.getElementById ("sc").innerHTML = "Your score: "+score;
+	
+	if (life==1){document.getElementById('lifescale').src="images/life2.png";}
+	else if (life==2){document.getElementById('lifescale').src="images/life1.png";}
+	else if (life==3){
+	document.getElementById('lifescale').src="images/life0.png";
+	clearInterval(timer);
+	document.getElementById("myProgress").hidden=true;
+	$('#quest').fadeOut(1);
+	$('#pics').fadeOut(1);
+	document.getElementById ("sc").innerHTML = "Your score: "+score;
+	document.getElementById ('gameover').hidden = false;
+	document.getElementById ('back').hidden = false;
+	document.getElementById ('gameover').src = "images/gameover.png";
+	document.getElementById ('back').src = "images/back.png";
+	}
+    
+    if (questnum==1)
+    {
+    $('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy2a.png";
+	document.getElementById("picTwo").src = "images/easy2a.png";
+	document.getElementById("picThree").src = "images/easy2a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+     
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "2.)Who eats banana?";
+    	document.getElementById ("Button1").value = "horse";
+    	document.getElementById ("Button2").value = "monkey";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "mouse";
+    	questnum=2;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+		document.getElementById ("ask").innerHTML = "2.)Who eats banana?";
+    	document.getElementById ("Button1").value = "horse";
+    	document.getElementById ("Button2").value = "monkey";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "mouse";
+    	questnum=2;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+		document.getElementById ("ask").innerHTML = "2.)Who eats banana?";
+    	document.getElementById ("Button1").value = "horse";
+    	document.getElementById ("Button2").value = "monkey";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "mouse";
+    	questnum=2;
+    	}
+    }
+    else if (questnum==2)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy3a.png";
+	document.getElementById("picTwo").src = "images/easy3a.png";
+	document.getElementById("picThree").src = "images/easy3a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "3.) Which of the animals do not eat fish?";
+      	document.getElementById ("Button1").value = "sealion";
+    	document.getElementById ("Button2").value = "owl";
+    	document.getElementById ("Button3").value = "crocodile";
+    	document.getElementById ("Button4").value = "cat";
+    	questnum=3;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "3.) Which of the animals do not eat fish?";
+    	document.getElementById ("Button1").value = "sealion";
+    	document.getElementById ("Button2").value = "owl";
+    	document.getElementById ("Button3").value = "crocodile";
+    	document.getElementById ("Button4").value = "cat";
+    	questnum=3;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "3.) Which of the animals do not eat fish?";
+      	document.getElementById ("Button1").value = "sealion";
+    	document.getElementById ("Button2").value = "owl";
+    	document.getElementById ("Button3").value = "dog";
+    	document.getElementById ("Button4").value = "cat";
+    	questnum=3;
+    	}
+    }
+   	else if (questnum==3)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy4a.png";
+	document.getElementById("picTwo").src = "images/easy4a.png";
+	document.getElementById("picThree").src = "images/easy4a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "4.) Who eats mosquito?";
+      	document.getElementById ("Button1").value = "butterfly";
+    	document.getElementById ("Button2").value = "cat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "frog";
+    	questnum=4;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "4.) Who eats mosquito?";
+      	document.getElementById ("Button1").value = "butterfly";
+    	document.getElementById ("Button2").value = "cat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "frog";
+    	questnum=4;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+   document.getElementById ("ask").innerHTML = "4.)";
+      	document.getElementById ("Button1").value = "butterfly";
+    	document.getElementById ("Button2").value = "cat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "frog";
+    	questnum=4;
+    	}
+	}
+	else if (questnum==4)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy5a.png";
+	document.getElementById("picTwo").src = "images/easy5a.png";
+	document.getElementById("picThree").src = "images/easy5a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "5.) Who eats worm?";
+      	document.getElementById ("Button1").value = "bird";
+    	document.getElementById ("Button2").value = "rat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "ants";
+    	questnum=5;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+document.getElementById ("ask").innerHTML = "5.) Who eats worm?";
+      	document.getElementById ("Button1").value = "bird";
+    	document.getElementById ("Button2").value = "rat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "ants";
+    	questnum=5;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "5.) Who eats worm?";
+      	document.getElementById ("Button1").value = "bird";
+    	document.getElementById ("Button2").value = "rat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "ants";
+    	questnum=5;
+    	}
+	}
+	else if (questnum==5)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy6a.png";
+	document.getElementById("picTwo").src = "images/easy6a.png";
+	document.getElementById("picThree").src = "images/easy6a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	    	document.getElementById ("ask").innerHTML = "6.) Who eats walnut? ";
+      	document.getElementById ("Button1").value = "rat";
+    	document.getElementById ("Button2").value = "squirrel";
+    	document.getElementById ("Button3").value = "bunny";
+    	document.getElementById ("Button4").value = "rabbit";
+    	questnum=6;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+       	document.getElementById ("ask").innerHTML = "6.) Who eats walnut? ";
+      	document.getElementById ("Button1").value = "rat";
+    	document.getElementById ("Button2").value = "squirrel";
+    	document.getElementById ("Button3").value = "bunny";
+    	document.getElementById ("Button4").value = "rabbit";
+    	questnum=6;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+      	document.getElementById ("ask").innerHTML = "6.) Who eats walnut? ";
+      	document.getElementById ("Button1").value = "rat";
+    	document.getElementById ("Button2").value = "squirrel";
+    	document.getElementById ("Button3").value = "bunny";
+    	document.getElementById ("Button4").value = "rabbit";
+    	questnum=6;
+    	}
+	}
+	else if (questnum==6)
+    {
+	$('#quest').fadeOut(4);
+	document.getElementById("picOne").src = "images/easy7a.png";
+	document.getElementById("picTwo").src = "images/easy7a.png";
+	document.getElementById("picThree").src = "images/easy7a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    		 	document.getElementById ("ask").innerHTML = "7.) Who eats bamboo?";
+	document.getElementById ("Button1").value = "tarsier";
+    	document.getElementById ("Button2").value = "kuala";
+    	document.getElementById ("Button3").value = "snail";
+    	document.getElementById ("Button4").value = "panda";
+    	questnum=7;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	 	document.getElementById ("ask").innerHTML = "7.) Who eats bamboo?";
+	document.getElementById ("Button1").value = "tarsier";
+    	document.getElementById ("Button2").value = "kuala";
+    	document.getElementById ("Button3").value = "snail";
+    	document.getElementById ("Button4").value = "panda";
+    	questnum=7;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+	 	document.getElementById ("ask").innerHTML = "7.) Who eats bamboo?";
+	document.getElementById ("Button1").value = "tarsier";
+    	document.getElementById ("Button2").value = "kuala";
+    	document.getElementById ("Button3").value = "snail";
+    	document.getElementById ("Button4").value = "panda";
+    	questnum=7;
+    	}
+	}
+	else if (questnum==7)
+    {
+	$('#quest').fadeOut(3);
+	document.getElementById("picOne").src = "images/easy8a.png";
+	document.getElementById("picTwo").src = "images/easy8a.png";
+	document.getElementById("picThree").src = "images/easy8a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    document.getElementById ("ask").innerHTML = "8.) What animal does not eat grass?";
+      	document.getElementById ("Button1").value = "pig";
+    	document.getElementById ("Button2").value = "horse";
+    	document.getElementById ("Button3").value = "carabao";
+    	document.getElementById ("Button4").value = "cow";
+    	questnum=8;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "8.) What animal does not eat grass?";
+      	document.getElementById ("Button1").value = "pig";
+    	document.getElementById ("Button2").value = "horse";
+    	document.getElementById ("Button3").value = "carabao";
+    	document.getElementById ("Button4").value = "cow";
+    	questnum=8;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    document.getElementById ("ask").innerHTML = "8.) What animal does not eat grass?";
+      	document.getElementById ("Button1").value = "pig";
+    	document.getElementById ("Button2").value = "horse";
+    	document.getElementById ("Button3").value = "carabao";
+    	document.getElementById ("Button4").value = "cow";
+    	questnum=8;
+    	}
+	}
+	else if (questnum==8)
+    {
+	$('#quest').fadeOut(2);
+	document.getElementById("picOne").src = "images/easy9a.png";
+	document.getElementById("picTwo").src = "images/easy9a.png";
+	document.getElementById("picThree").src = "images/easy9a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "9.) Who eats nectar?";
+      	document.getElementById ("Button1").value = "bee";
+    	document.getElementById ("Button2").value = "lizard";
+    	document.getElementById ("Button3").value = "flies";
+    	document.getElementById ("Button4").value = "mosquito";
+    	questnum=9;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+   document.getElementById ("ask").innerHTML = "9.) Who eats nectar?";
+      	document.getElementById ("Button1").value = "bee";
+    	document.getElementById ("Button2").value = "lizard";
+    	document.getElementById ("Button3").value = "flies";
+    	document.getElementById ("Button4").value = "mosquito";
+    	questnum=9;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    document.getElementById ("ask").innerHTML = "9.) Who eats nectar?";
+      	document.getElementById ("Button1").value = "bee";
+    	document.getElementById ("Button2").value = "lizard";
+    	document.getElementById ("Button3").value = "flies";
+    	document.getElementById ("Button4").value = "mosquito";
+    	questnum=9;
+    	}
+	}
+	else if (questnum==9)
+    {
+	$('#quest').fadeOut(1);
+	document.getElementById("picOne").src = "images/easy10a.png";
+	document.getElementById("picTwo").src = "images/easy10a.png";
+	document.getElementById("picThree").src = "images/easy10a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+     	document.getElementById ("ask").innerHTML = "10.) What animal eats beef?";
+      	document.getElementById ("Button1").value = "lion";
+    	document.getElementById ("Button2").value = "penguin";
+    	document.getElementById ("Button3").value = "giraffe";
+    	document.getElementById ("Button4").value = "elephant";
+    	questnum=10;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	 	document.getElementById ("ask").innerHTML = "10.) What animal eats beef?";
+      	document.getElementById ("Button1").value = "lion";
+    	document.getElementById ("Button2").value = "penguin";
+    	document.getElementById ("Button3").value = "giraffe";
+    	document.getElementById ("Button4").value = "elephant";
+    	questnum=10;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "10.) What animal eats beef?";
+      	document.getElementById ("Button1").value = "lion";
+    	document.getElementById ("Button2").value = "penguin";
+    	document.getElementById ("Button3").value = "giraffe";
+    	document.getElementById ("Button4").value = "elephant";
+    	questnum=10;
+    	}
+	}
+}
+
+function check_b()
+{ 
+	if (questnum==10)
+	{
+	clearInterval(timer);
+	document.getElementById("myProgress").hidden=true;
+	$('#quest').fadeOut(1);
+	$('#pics').fadeOut(1);
+	document.getElementById ("sc").innerHTML = "Your score: "+score;
+	document.getElementById ('gameover').hidden = false;
+	document.getElementById ('back').hidden = false;
+	document.getElementById ('gameover').src = "images/gameover.png";
+	document.getElementById ('back').src = "images/back.png";
+	}
+	
+	ans = document.getElementById ("Button2").value;
+	if(ans=="police"){score=score+1;}
+	else if(ans=="dog"){score=score+1;}
+else if(ans=="monkey"){score=score+1;}
+else if(ans=="owl"){score=score+1;}
+	else if(ans=="squirrel"){score=score+1;}
+	else if(ans=="store"){score=score+1;}
+	else if(ans=="horse"){score=score+1;}
+
+	else{score=score;life=life+1;}
+	document.getElementById ("sc").innerHTML = "Your score: "+score;
+	
+	if (life==1){document.getElementById('lifescale').src="images/life2.png";}
+	else if (life==2){document.getElementById('lifescale').src="images/life1.png";}
+	else if (life==3){
+	document.getElementById('lifescale').src="images/life0.png";
+	clearInterval(timer);
+	document.getElementById("myProgress").hidden=true;
+	$('#quest').fadeOut(1);
+	$('#pics').fadeOut(1);
+	document.getElementById ("sc").innerHTML = "Your score: "+score;
+	document.getElementById ('gameover').hidden = false;
+	document.getElementById ('back').hidden = false;
+	document.getElementById ('gameover').src = "images/gameover.png";
+	document.getElementById ('back').src = "images/back.png";
+	}
+
+    if (questnum==1)
+    {
+    $('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy2a.png";
+	document.getElementById("picTwo").src = "images/easy2a.png";
+	document.getElementById("picThree").src = "images/easy2a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+     
+    	if (list[randomnum]=='#picOne')
+    	{
+  		document.getElementById ("ask").innerHTML = "2.)Who eats banana?";
+    	document.getElementById ("Button1").value = "horse";
+    	document.getElementById ("Button2").value = "monkey";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "mouse";
+    	questnum=2;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    		document.getElementById ("ask").innerHTML = "2.)Who eats banana?";
+    	document.getElementById ("Button1").value = "horse";
+    	document.getElementById ("Button2").value = "monkey";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "mouse";
+    	questnum=2;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    		document.getElementById ("ask").innerHTML = "2.)Who eats banana?";
+    	document.getElementById ("Button1").value = "horse";
+    	document.getElementById ("Button2").value = "monkey";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "mouse";
+    	questnum=2;
+    	}
+    }
+    else if (questnum==2)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy3a.png";
+	document.getElementById("picTwo").src = "images/easy3a.png";
+	document.getElementById("picThree").src = "images/easy3a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+ 	document.getElementById ("ask").innerHTML = "3.) Which of the animals do not eat fish?";
+      	document.getElementById ("Button1").value = "sealion";
+    	document.getElementById ("Button2").value = "owl";
+    	document.getElementById ("Button3").value = "dog";
+    	document.getElementById ("Button4").value = "cat";
+    	questnum=3;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    		document.getElementById ("ask").innerHTML = "3.) Which of the animals do not eat fish?";
+      	document.getElementById ("Button1").value = "sealion";
+    	document.getElementById ("Button2").value = "owl";
+    	document.getElementById ("Button3").value = "dog";
+    	document.getElementById ("Button4").value = "cat";
+    	questnum=3;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    		document.getElementById ("ask").innerHTML = "3.) Which of the animals do not eat fish?";
+      	document.getElementById ("Button1").value = "sealion";
+    	document.getElementById ("Button2").value = "owl";
+    	document.getElementById ("Button3").value = "dog";
+    	document.getElementById ("Button4").value = "cat";
+    	questnum=3;
+    	}
+    }
+   	else if (questnum==3)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy4a.png";
+	document.getElementById("picTwo").src = "images/easy4a.png";
+	document.getElementById("picThree").src = "images/easy4a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "4.) Who eats mosquito?";
+      	document.getElementById ("Button1").value = "butterfly";
+    	document.getElementById ("Button2").value = "cat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "frog";
+    	questnum=4;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+document.getElementById ("ask").innerHTML = "4.) Who eats mosquito?";
+      	document.getElementById ("Button1").value = "butterfly";
+    	document.getElementById ("Button2").value = "cat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "frog";
+    	questnum=4;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    document.getElementById ("ask").innerHTML = "4.) Who eats mosquito?";
+      	document.getElementById ("Button1").value = "butterfly";
+    	document.getElementById ("Button2").value = "cat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "frog";
+    	questnum=4;
+    	}
+	}
+	else if (questnum==4)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy5a.png";
+	document.getElementById("picTwo").src = "images/easy5a.png";
+	document.getElementById("picThree").src = "images/easy5a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "5.) Who eats worm?";
+      	document.getElementById ("Button1").value = "bird";
+    	document.getElementById ("Button2").value = "rat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "ants";
+    	questnum=5;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+   document.getElementById ("ask").innerHTML = "5.) Who eats worm?";
+      	document.getElementById ("Button1").value = "bird";
+    	document.getElementById ("Button2").value = "rat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "ants";
+    	questnum=5;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    document.getElementById ("ask").innerHTML = "5.) Who eats worm?";
+      	document.getElementById ("Button1").value = "bird";
+    	document.getElementById ("Button2").value = "rat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "ants";
+    	questnum=5;
+    	}
+	}
+	else if (questnum==5)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy6a.png";
+	document.getElementById("picTwo").src = "images/easy6a.png";
+	document.getElementById("picThree").src = "images/easy6a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	    	document.getElementById ("ask").innerHTML = "6.) Who eats walnut? ";
+      	document.getElementById ("Button1").value = "rat";
+    	document.getElementById ("Button2").value = "squirrel";
+    	document.getElementById ("Button3").value = "bunny";
+    	document.getElementById ("Button4").value = "rabbit";
+    	questnum=6;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	    	document.getElementById ("ask").innerHTML = "6.) Who eats walnut? ";
+      	document.getElementById ("Button1").value = "rat";
+    	document.getElementById ("Button2").value = "squirrel";
+    	document.getElementById ("Button3").value = "bunny";
+    	document.getElementById ("Button4").value = "rabbit";
+    	questnum=6;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "6.) Who eats walnut? ";
+      	document.getElementById ("Button1").value = "rat";
+    	document.getElementById ("Button2").value = "squirrel";
+    	document.getElementById ("Button3").value = "bunny";
+    	document.getElementById ("Button4").value = "rabbit";
+    	questnum=6;
+    	}
+	}
+	else if (questnum==6)
+    {
+	$('#quest').fadeOut(4);
+	document.getElementById("picOne").src = "images/easy7a.png";
+	document.getElementById("picTwo").src = "images/easy7a.png";
+	document.getElementById("picThree").src = "images/easy7a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    		 	document.getElementById ("ask").innerHTML = "7.) Who eats bamboo?";
+	document.getElementById ("Button1").value = "tarsier";
+    	document.getElementById ("Button2").value = "kuala";
+    	document.getElementById ("Button3").value = "snail";
+    	document.getElementById ("Button4").value = "panda";
+    	questnum=7;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    		 	document.getElementById ("ask").innerHTML = "7.) Who eats bamboo?";
+	document.getElementById ("Button1").value = "tarsier";
+    	document.getElementById ("Button2").value = "kuala";
+    	document.getElementById ("Button3").value = "snail";
+    	document.getElementById ("Button4").value = "panda";
+    	questnum=7;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+ 	 	document.getElementById ("ask").innerHTML = "7.) Who eats bamboo?";
+	document.getElementById ("Button1").value = "tarsier";
+    	document.getElementById ("Button2").value = "kuala";
+    	document.getElementById ("Button3").value = "snail";
+    	document.getElementById ("Button4").value = "panda";
+    	questnum=7;
+    	}
+	}
+	else if (questnum==7)
+    {
+	$('#quest').fadeOut(3);
+	document.getElementById("picOne").src = "images/easy8a.png";
+	document.getElementById("picTwo").src = "images/easy8a.png";
+	document.getElementById("picThree").src = "images/easy8a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "8.) What animal does not eat grass?";
+      	document.getElementById ("Button1").value = "pig";
+    	document.getElementById ("Button2").value = "horse";
+    	document.getElementById ("Button3").value = "carabao";
+    	document.getElementById ("Button4").value = "cow";
+    	questnum=8;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+  document.getElementById ("ask").innerHTML = "8.) What animal does not eat grass?";
+      	document.getElementById ("Button1").value = "pig";
+    	document.getElementById ("Button2").value = "horse";
+    	document.getElementById ("Button3").value = "carabao";
+    	document.getElementById ("Button4").value = "cow";
+    	questnum=8;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+  document.getElementById ("ask").innerHTML = "8.) What animal does not eat grass?";
+      	document.getElementById ("Button1").value = "pig";
+    	document.getElementById ("Button2").value = "horse";
+    	document.getElementById ("Button3").value = "carabao";
+    	document.getElementById ("Button4").value = "cow";
+    	questnum=8;
+    	}
+	}
+	else if (questnum==8)
+    {
+	$('#quest').fadeOut(2);
+	document.getElementById("picOne").src = "images/easy9a.png";
+	document.getElementById("picTwo").src = "images/easy9a.png";
+	document.getElementById("picThree").src = "images/easy9a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+document.getElementById ("ask").innerHTML = "9.) Who eats nectar?";
+      	document.getElementById ("Button1").value = "bee";
+    	document.getElementById ("Button2").value = "lizard";
+    	document.getElementById ("Button3").value = "flies";
+    	document.getElementById ("Button4").value = "mosquito";
+    	questnum=9;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+ document.getElementById ("ask").innerHTML = "9.) Who eats nectar?";
+      	document.getElementById ("Button1").value = "bee";
+    	document.getElementById ("Button2").value = "lizard";
+    	document.getElementById ("Button3").value = "flies";
+    	document.getElementById ("Button4").value = "mosquito";
+    	questnum=9;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    document.getElementById ("ask").innerHTML = "9.) Who eats nectar?";
+      	document.getElementById ("Button1").value = "bee";
+    	document.getElementById ("Button2").value = "lizard";
+    	document.getElementById ("Button3").value = "flies";
+    	document.getElementById ("Button4").value = "mosquito";
+    	questnum=9;
+    	}
+	}
+	else if (questnum==9)
+    {
+	$('#quest').fadeOut(1);
+	document.getElementById("picOne").src = "images/easy10a.png";
+	document.getElementById("picTwo").src = "images/easy10a.png";
+	document.getElementById("picThree").src = "images/easy10a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+ 	document.getElementById ("ask").innerHTML = "10.) What animal eats beef?";
+      	document.getElementById ("Button1").value = "lion";
+    	document.getElementById ("Button2").value = "penguin";
+    	document.getElementById ("Button3").value = "giraffe";
+    	document.getElementById ("Button4").value = "elephant";
+    	questnum=10;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	 	document.getElementById ("ask").innerHTML = "10.) What animal eats beef?";
+      	document.getElementById ("Button1").value = "lion";
+    	document.getElementById ("Button2").value = "penguin";
+    	document.getElementById ("Button3").value = "giraffe";
+    	document.getElementById ("Button4").value = "elephant";
+    	questnum=10;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+     	document.getElementById ("ask").innerHTML = "10.) What animal eats beef?";
+      	document.getElementById ("Button1").value = "lion";
+    	document.getElementById ("Button2").value = "penguin";
+    	document.getElementById ("Button3").value = "giraffe";
+    	document.getElementById ("Button4").value = "elephant";
+    	questnum=10;
+    	}
+	}
+	
+
+}
+
+function check_c()
+{   
+
+	if (questnum==10)
+	{
+	clearInterval(timer);
+	document.getElementById("myProgress").hidden=true;
+	$('#quest').fadeOut(1);
+	$('#pics').fadeOut(1);
+	document.getElementById ("sc").innerHTML = "Your score: "+score;
+	document.getElementById ('gameover').hidden = false;
+	document.getElementById ('back').hidden = false;
+	document.getElementById ('gameover').src = "images/gameover.png";
+	document.getElementById ('back').src = "images/back.png";
+	}
+	
+	ans = document.getElementById ("Button3").value;
+	if(ans=="fish"){score=score+1;}
+	else if(ans=="giraffe"){score=score+1;}
+	else if(ans=="sheep"){score=score+1;}
+	else if(ans=="merry"){score=score+1;}
+	else if(ans=="sealion"){score=score+1;}
+	else if(ans=="goat"){score=score+1;}
+	else{score=score;life=life+1;}
+	document.getElementById ("sc").innerHTML = "Your score: "+score;
+	
+	
+	if (life==1){document.getElementById('lifescale').src="images/life2.png";}
+	else if (life==2){document.getElementById('lifescale').src="images/life1.png";}
+	else if (life==3){
+	document.getElementById('lifescale').src="images/life0.png";
+	clearInterval(timer);
+	document.getElementById("myProgress").hidden=true;
+	$('#quest').fadeOut(1);
+	$('#pics').fadeOut(1);
+	document.getElementById ("sc").innerHTML = "Your score: "+score;
+	document.getElementById ('gameover').hidden = false;
+	document.getElementById ('back').hidden = false;
+	document.getElementById ('gameover').src = "images/gameover.png";
+	document.getElementById ('back').src = "images/back.png";
+	}
+
+if (questnum==1)
+    {
+    $('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy2a.png";
+	document.getElementById("picTwo").src = "images/easy2a.png";
+	document.getElementById("picThree").src = "images/easy2a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+     
+    	if (list[randomnum]=='#picOne')
+    	{
+		document.getElementById ("ask").innerHTML = "2.)Who eats banana?";
+    	document.getElementById ("Button1").value = "horse";
+    	document.getElementById ("Button2").value = "monkey";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "mouse";
+    	questnum=2;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    		document.getElementById ("ask").innerHTML = "2.)Who eats banana?";
+    	document.getElementById ("Button1").value = "horse";
+    	document.getElementById ("Button2").value = "monkey";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "mouse";
+    	questnum=2;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    			document.getElementById ("ask").innerHTML = "2.)Who eats banana?";
+    	document.getElementById ("Button1").value = "horse";
+    	document.getElementById ("Button2").value = "monkey";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "mouse";
+    	questnum=2;
+    	}
+    }
+    else if (questnum==2)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy3a.png";
+	document.getElementById("picTwo").src = "images/easy3a.png";
+	document.getElementById("picThree").src = "images/easy3a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    		document.getElementById ("ask").innerHTML = "3.) Which of the animals do not eat fish?";
+      	document.getElementById ("Button1").value = "sealion";
+    	document.getElementById ("Button2").value = "owl";
+    	document.getElementById ("Button3").value = "dog";
+    	document.getElementById ("Button4").value = "cat";
+    	questnum=3;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    		document.getElementById ("ask").innerHTML = "3.) Which of the animals do not eat fish?";
+      	document.getElementById ("Button1").value = "sealion";
+    	document.getElementById ("Button2").value = "owl";
+    	document.getElementById ("Button3").value = "dog";
+    	document.getElementById ("Button4").value = "cat";
+    	questnum=3;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+   	document.getElementById ("ask").innerHTML = "3.) Which of the animals do not eat fish?";
+      	document.getElementById ("Button1").value = "sealion";
+    	document.getElementById ("Button2").value = "owl";
+    	document.getElementById ("Button3").value = "dog";
+    	document.getElementById ("Button4").value = "cat";
+    	questnum=3;
+    	}
+    }
+   	else if (questnum==3)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy4a.png";
+	document.getElementById("picTwo").src = "images/easy4a.png";
+	document.getElementById("picThree").src = "images/easy4a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "4.) Who eats mosquito?";
+      	document.getElementById ("Button1").value = "butterfly";
+    	document.getElementById ("Button2").value = "cat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "frog";
+    	questnum=4;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "4.) Who eats mosquito?";
+      	document.getElementById ("Button1").value = "butterfly";
+    	document.getElementById ("Button2").value = "cat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "frog";
+    	questnum=4;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "4.) Who eats mosquito?";
+      	document.getElementById ("Button1").value = "butterfly";
+    	document.getElementById ("Button2").value = "cat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "frog";
+    	questnum=4;
+    	}
+	}
+	else if (questnum==4)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy5a.png";
+	document.getElementById("picTwo").src = "images/easy5a.png";
+	document.getElementById("picThree").src = "images/easy5a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+  document.getElementById ("ask").innerHTML = "5.) Who eats worm?";
+      	document.getElementById ("Button1").value = "bird";
+    	document.getElementById ("Button2").value = "rat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "ants";
+    	questnum=5;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "5.) Who eats worm?";
+      	document.getElementById ("Button1").value = "bird";
+    	document.getElementById ("Button2").value = "rat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "ants";
+    	questnum=5;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    document.getElementById ("ask").innerHTML = "5.) Who eats worm?";
+      	document.getElementById ("Button1").value = "bird";
+    	document.getElementById ("Button2").value = "rat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "ants";
+    	questnum=5;
+    	}
+	}
+	else if (questnum==5)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy6a.png";
+	document.getElementById("picTwo").src = "images/easy6a.png";
+	document.getElementById("picThree").src = "images/easy6a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	    	document.getElementById ("ask").innerHTML = "6.) Who eats walnut? ";
+      	document.getElementById ("Button1").value = "rat";
+    	document.getElementById ("Button2").value = "squirrel";
+    	document.getElementById ("Button3").value = "bunny";
+    	document.getElementById ("Button4").value = "rabbit";
+    	questnum=6;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "6.) Who eats walnut? ";
+      	document.getElementById ("Button1").value = "rat";
+    	document.getElementById ("Button2").value = "squirrel";
+    	document.getElementById ("Button3").value = "bunny";
+    	document.getElementById ("Button4").value = "rabbit";
+    	questnum=6;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+       	document.getElementById ("ask").innerHTML = "6.) Who eats walnut? ";
+      	document.getElementById ("Button1").value = "rat";
+    	document.getElementById ("Button2").value = "squirrel";
+    	document.getElementById ("Button3").value = "bunny";
+    	document.getElementById ("Button4").value = "rabbit";
+    	questnum=6;
+    	}
+	}
+	else if (questnum==6)
+    {
+	$('#quest').fadeOut(4);
+	document.getElementById("picOne").src = "images/easy7a.png";
+	document.getElementById("picTwo").src = "images/easy7a.png";
+	document.getElementById("picThree").src = "images/easy7a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	 	document.getElementById ("ask").innerHTML = "7.) Who eats bamboo?";
+	document.getElementById ("Button1").value = "tarsier";
+    	document.getElementById ("Button2").value = "kuala";
+    	document.getElementById ("Button3").value = "snail";
+    	document.getElementById ("Button4").value = "panda";
+    	questnum=7;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+  	 	document.getElementById ("ask").innerHTML = "7.) Who eats bamboo?";
+	document.getElementById ("Button1").value = "tarsier";
+    	document.getElementById ("Button2").value = "kuala";
+    	document.getElementById ("Button3").value = "snail";
+    	document.getElementById ("Button4").value = "panda";
+    	questnum=7;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    		 	document.getElementById ("ask").innerHTML = "7.) Who eats bamboo?";
+	document.getElementById ("Button1").value = "tarsier";
+    	document.getElementById ("Button2").value = "kuala";
+    	document.getElementById ("Button3").value = "snail";
+    	document.getElementById ("Button4").value = "panda";
+    	questnum=7;
+    	}
+	}
+	else if (questnum==7)
+    {
+	$('#quest').fadeOut(3);
+	document.getElementById("picOne").src = "images/easy8a.png";
+	document.getElementById("picTwo").src = "images/easy8a.png";
+	document.getElementById("picThree").src = "images/easy8a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "8.) What animal does not eat grass?";
+      	document.getElementById ("Button1").value = "pig";
+    	document.getElementById ("Button2").value = "horse";
+    	document.getElementById ("Button3").value = "carabao";
+    	document.getElementById ("Button4").value = "cow";
+    	questnum=8;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+document.getElementById ("ask").innerHTML = "8.) What animal does not eat grass?";
+      	document.getElementById ("Button1").value = "pig";
+    	document.getElementById ("Button2").value = "horse";
+    	document.getElementById ("Button3").value = "carabao";
+    	document.getElementById ("Button4").value = "cow";
+    	questnum=8;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "8.) What animal does not eat grass?";
+      	document.getElementById ("Button1").value = "pig";
+    	document.getElementById ("Button2").value = "horse";
+    	document.getElementById ("Button3").value = "carabao";
+    	document.getElementById ("Button4").value = "cow";
+    	questnum=8;
+    	}
+	}
+	else if (questnum==8)
+    {
+	$('#quest').fadeOut(2);
+	document.getElementById("picOne").src = "images/easy9a.png";
+	document.getElementById("picTwo").src = "images/easy9a.png";
+	document.getElementById("picThree").src = "images/easy9a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+ document.getElementById ("ask").innerHTML = "9.) Who eats nectar?";
+      	document.getElementById ("Button1").value = "bee";
+    	document.getElementById ("Button2").value = "lizard";
+    	document.getElementById ("Button3").value = "flies";
+    	document.getElementById ("Button4").value = "mosquito";
+    	questnum=9;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+ document.getElementById ("ask").innerHTML = "9.) Who eats nectar?";
+      	document.getElementById ("Button1").value = "bee";
+    	document.getElementById ("Button2").value = "lizard";
+    	document.getElementById ("Button3").value = "flies";
+    	document.getElementById ("Button4").value = "mosquito";
+    	questnum=9;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+ document.getElementById ("ask").innerHTML = "9.) Who eats nectar?";
+      	document.getElementById ("Button1").value = "bee";
+    	document.getElementById ("Button2").value = "lizard";
+    	document.getElementById ("Button3").value = "flies";
+    	document.getElementById ("Button4").value = "mosquito";
+    	questnum=9;
+    	}
+	}
+	else if (questnum==9)
+    {
+	$('#quest').fadeOut(1);
+	document.getElementById("picOne").src = "images/easy10a.png";
+	document.getElementById("picTwo").src = "images/easy10a.png";
+	document.getElementById("picThree").src = "images/easy10a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+   	document.getElementById ("ask").innerHTML = "10.) What animal eats beef?";
+      	document.getElementById ("Button1").value = "lion";
+    	document.getElementById ("Button2").value = "penguin";
+    	document.getElementById ("Button3").value = "giraffe";
+    	document.getElementById ("Button4").value = "elephant";
+    	questnum=10;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+     	document.getElementById ("ask").innerHTML = "10.) What animal eats beef?";
+      	document.getElementById ("Button1").value = "lion";
+    	document.getElementById ("Button2").value = "penguin";
+    	document.getElementById ("Button3").value = "giraffe";
+    	document.getElementById ("Button4").value = "elephant";
+    	questnum=10;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+     	document.getElementById ("ask").innerHTML = "10.) What animal eats beef?";
+      	document.getElementById ("Button1").value = "lion";
+    	document.getElementById ("Button2").value = "penguin";
+    	document.getElementById ("Button3").value = "giraffe";
+    	document.getElementById ("Button4").value = "elephant";
+    	questnum=10;
+    	}
+	}
+	else if (questnum==10)
+    {
+	$('#quest').fadeOut(1);
+	document.getElementById("picOne").src = "images/easy11a.png";
+	document.getElementById("picTwo").src = "images/easy11b.png";
+	document.getElementById("picThree").src = "images/easy11c.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "11.) Which word is not included?";
+      	document.getElementById ("Button1").value = "notebook";
+    	document.getElementById ("Button2").value = "battery";
+    	document.getElementById ("Button3").value = "shirt";
+    	document.getElementById ("Button4").value = "cable";
+    	questnum=11;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "11.) Which word is not included?";
+    	document.getElementById ("Button1").value = "towel";
+    	document.getElementById ("Button2").value = "belts";
+    	document.getElementById ("Button3").value = "cabinet";
+    	document.getElementById ("Button4").value = "pillow";
+    	questnum=11;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "11.) Which word is not included?";
+    	document.getElementById ("Button1").value = "plastic";
+    	document.getElementById ("Button2").value = "pants";
+    	document.getElementById ("Button3").value = "jacket";
+    	document.getElementById ("Button4").value = "finger";
+    	questnum=11;
+    	}
+	}
+	
+	else if (questnum==11)
+    {
+	$('#quest').fadeOut(1);
+	document.getElementById("picOne").src = "images/easy12a.png";
+	document.getElementById("picTwo").src = "images/easy12b.png";
+	document.getElementById("picThree").src = "images/easy12c.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "12.) Which word is not included?";
+      	document.getElementById ("Button1").value = "light";
+    	document.getElementById ("Button2").value = "bomb";
+    	document.getElementById ("Button3").value = "desks";
+    	document.getElementById ("Button4").value = "shoebox";
+    	questnum=12;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "12.) Which word is not included?";
+    	document.getElementById ("Button1").value = "fork";
+    	document.getElementById ("Button2").value = "soil";
+    	document.getElementById ("Button3").value = "camera";
+    	document.getElementById ("Button4").value = "television";
+    	questnum=12;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "12.) Which word is not included?";
+    	document.getElementById ("Button1").value = "sink";
+    	document.getElementById ("Button2").value = "sand";
+    	document.getElementById ("Button3").value = "water";
+    	document.getElementById ("Button4").value = "spoon";
+    	questnum=12;
+    	}
+	}
+	else if (questnum==12)
+    {
+	$('#quest').fadeOut(1);
+	document.getElementById("picOne").src = "images/easy13a.png";
+	document.getElementById("picTwo").src = "images/easy13b.png";
+	document.getElementById("picThree").src = "images/easy13c.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "13.) Which word is an animal?";
+      	document.getElementById ("Button1").value = "whale";
+    	document.getElementById ("Button2").value = "horse";
+    	document.getElementById ("Button3").value = "donkey";
+    	document.getElementById ("Button4").value = "camel";
+    	questnum=13;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "13.) Which word is an animal?";
+    	document.getElementById ("Button1").value = "kangaroo";
+    	document.getElementById ("Button2").value = "leopard";
+    	document.getElementById ("Button3").value = "goat";
+    	document.getElementById ("Button4").value = "shark";
+    	questnum=13;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "13.) Which word is an animal?";
+    	document.getElementById ("Button1").value = "eagle";
+    	document.getElementById ("Button2").value = "bat";
+    	document.getElementById ("Button3").value = "zebra";
+    	document.getElementById ("Button4").value = "deer";
+    	questnum=13;
+    	}
+	}
+	else if (questnum==13)
+    {
+	$('#quest').fadeOut(1);
+	document.getElementById("picOne").src = "images/easy14a.png";
+	document.getElementById("picTwo").src = "images/easy14b.png";
+	document.getElementById("picThree").src = "images/easy14c.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "14.) Which word starts with letter 'd'?";
+      	document.getElementById ("Button1").value = "dance";
+    	document.getElementById ("Button2").value = "deck";
+    	document.getElementById ("Button3").value = "diamond";
+    	document.getElementById ("Button4").value = "dot";
+    	questnum=14;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "14.) Which word starts with letter 'd'?";
+    	document.getElementById ("Button1").value = "date";
+    	document.getElementById ("Button2").value = "dress";
+    	document.getElementById ("Button3").value = "dustpan";
+    	document.getElementById ("Button4").value = "dives";
+    	questnum=14;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "14.) Which word starts with letter 'd'?";
+    	document.getElementById ("Button1").value = "ducks";
+    	document.getElementById ("Button2").value = "drum";
+    	document.getElementById ("Button3").value = "dump";
+    	document.getElementById ("Button4").value = "disk";
+    	questnum=14;
+    	}
+	}
+	else if (questnum==14)
+    {
+	$('#quest').fadeOut(1);
+	document.getElementById("picOne").src = "images/easy15a.png";
+	document.getElementById("picTwo").src = "images/easy15b.png";
+	document.getElementById("picThree").src = "images/easy15c.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "15.) Which word ends with letter 'e'";
+      	document.getElementById ("Button1").value = "love";
+    	document.getElementById ("Button2").value = "egg";
+    	document.getElementById ("Button3").value = "shoe";
+    	document.getElementById ("Button4").value = "snake";
+    	questnum=15;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "15.) Which word ends with letter 'e'?";
+    	document.getElementById ("Button1").value = "seashore";
+    	document.getElementById ("Button2").value = "scam";
+    	document.getElementById ("Button3").value = "shrine";
+    	document.getElementById ("Button4").value = "shame";
+    	questnum=15;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "15.) Which word ends with letter 'e'?";
+    	document.getElementById ("Button1").value = "fame";
+    	document.getElementById ("Button2").value = "lame";
+    	document.getElementById ("Button3").value = "bail";
+    	document.getElementById ("Button4").value = "sale";
+    	questnum=15;
+    	}
+	}
+
+}
+
+
+function check_d()
+{   
+
+if (questnum==10)
+	{
+	clearInterval(timer);
+	document.getElementById("myProgress").hidden=true;
+	$('#quest').fadeOut(1);
+	$('#pics').fadeOut(1);
+	document.getElementById ("sc").innerHTML = "Your score: "+score;
+	document.getElementById ('gameover').hidden = false;
+	document.getElementById ('back').hidden = false;
+	document.getElementById ('gameover').src = "images/gameover.png";
+	document.getElementById ('back').src = "images/back.png";
+	}
+	
+	ans = document.getElementById ("Button4").value;
+	if(ans=="elephant"){score=score+1;}
+	else if(ans=="guitar"){score=score+1;}
+		else if(ans=="frog"){score=score+1;}
+	else if(ans=="violin"){score=score+1;}
+	else if(ans=="panda"){score=score+1;}
+
+	else{score=score;life=life+1;}
+	document.getElementById ("sc").innerHTML = "Your score: "+score;	
+	
+	if (life==1){document.getElementById('lifescale').src="images/life2.png";}
+	else if (life==2){document.getElementById('lifescale').src="images/life1.png";}
+	else if (life==3){
+	document.getElementById('lifescale').src="images/life0.png";
+	clearInterval(timer);
+	document.getElementById("myProgress").hidden=true;
+	$('#quest').fadeOut(1);
+	$('#pics').fadeOut(1);
+	document.getElementById ("sc").innerHTML = "Your score: "+score;
+	document.getElementById ('gameover').hidden = false;
+	document.getElementById ('back').hidden = false;
+	document.getElementById ('gameover').src = "images/gameover.png";
+	document.getElementById ('back').src = "images/back.png";
+	}
+
+    
+if (questnum==1)
+    {
+    $('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy2a.png";
+	document.getElementById("picTwo").src = "images/easy2a.png";
+	document.getElementById("picThree").src = "images/easy2a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+     
+    	if (list[randomnum]=='#picOne')
+    	{
+		document.getElementById ("ask").innerHTML = "2.)Who eats banana?";
+    	document.getElementById ("Button1").value = "horse";
+    	document.getElementById ("Button2").value = "monkey";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "mouse";
+    	questnum=2;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    		document.getElementById ("ask").innerHTML = "2.)Who eats banana?";
+    	document.getElementById ("Button1").value = "horse";
+    	document.getElementById ("Button2").value = "monkey";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "mouse";
+    	questnum=2;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+		document.getElementById ("ask").innerHTML = "2.)Who eats banana?";
+    	document.getElementById ("Button1").value = "horse";
+    	document.getElementById ("Button2").value = "monkey";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "mouse";
+    	questnum=2;
+    	}
+    }
+    else if (questnum==2)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy3a.png";
+	document.getElementById("picTwo").src = "images/easy3b.png";
+	document.getElementById("picThree").src = "images/easy3c.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "3.) Which word is an animal?";
+      	document.getElementById ("Button1").value = "store";
+    	document.getElementById ("Button2").value = "owl";
+    	document.getElementById ("Button3").value = "giraffe";
+    	document.getElementById ("Button4").value = "snake";
+    	questnum=3;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "3.) Which word is an animal?";
+    	document.getElementById ("Button1").value = "sheep";
+    	document.getElementById ("Button2").value = "carabao";
+    	document.getElementById ("Button3").value = "clock";
+    	document.getElementById ("Button4").value = "rooster";
+    	questnum=3;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "3.) Which word is an animal?";
+    	document.getElementById ("Button1").value = "elephant";
+    	document.getElementById ("Button2").value = "nose";
+    	document.getElementById ("Button3").value = "sheep";
+    	document.getElementById ("Button4").value = "cow";
+    	questnum=3;
+    	}
+    }
+   	else if (questnum==3)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy4a.png";
+	document.getElementById("picTwo").src = "images/easy4a.png";
+	document.getElementById("picThree").src = "images/easy4a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "4.) Who eats mosquito?";
+      	document.getElementById ("Button1").value = "butterfly";
+    	document.getElementById ("Button2").value = "cat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "frog";
+    	questnum=4;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    document.getElementById ("ask").innerHTML = "4.) Who eats mosquito?";
+      	document.getElementById ("Button1").value = "butterfly";
+    	document.getElementById ("Button2").value = "cat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "frog";
+    	questnum=4;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+document.getElementById ("ask").innerHTML = "4.) Who eats mosquito?";
+      	document.getElementById ("Button1").value = "butterfly";
+    	document.getElementById ("Button2").value = "cat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "frog";
+    	questnum=4;
+    	}
+	}
+	else if (questnum==4)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy5a.png";
+	document.getElementById("picTwo").src = "images/easy5a.png";
+	document.getElementById("picThree").src = "images/easy5a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "5.) Who eats worm?";
+      	document.getElementById ("Button1").value = "bird";
+    	document.getElementById ("Button2").value = "rat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "ants";
+    	questnum=5;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "5.) Who eats worm?";
+      	document.getElementById ("Button1").value = "bird";
+    	document.getElementById ("Button2").value = "rat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "ants";
+    	questnum=5;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+document.getElementById ("ask").innerHTML = "5.) Who eats worm?";
+      	document.getElementById ("Button1").value = "bird";
+    	document.getElementById ("Button2").value = "rat";
+    	document.getElementById ("Button3").value = "snake";
+    	document.getElementById ("Button4").value = "ants";
+    	questnum=5;
+    	}
+	}
+	else if (questnum==5)
+    {
+	$('#quest').fadeOut(5);
+	document.getElementById("picOne").src = "images/easy6a.png";
+	document.getElementById("picTwo").src = "images/easy6a.png";
+	document.getElementById("picThree").src = "images/easy6a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "6.) Who eats walnut? Who eats walnut?";
+      	document.getElementById ("Button1").value = "rat";
+    	document.getElementById ("Button2").value = "squirrel";
+    	document.getElementById ("Button3").value = "bunny";
+    	document.getElementById ("Button4").value = "rabbit";
+    	questnum=6;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	    	document.getElementById ("ask").innerHTML = "6.) Who eats walnut? ";
+      	document.getElementById ("Button1").value = "rat";
+    	document.getElementById ("Button2").value = "squirrel";
+    	document.getElementById ("Button3").value = "bunny";
+    	document.getElementById ("Button4").value = "rabbit";
+    	questnum=6;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	    	document.getElementById ("ask").innerHTML = "6.) Who eats walnut? ";
+      	document.getElementById ("Button1").value = "rat";
+    	document.getElementById ("Button2").value = "squirrel";
+    	document.getElementById ("Button3").value = "bunny";
+    	document.getElementById ("Button4").value = "rabbit";
+    	questnum=6;
+    	}
+	}
+	else if (questnum==6)
+    {
+	$('#quest').fadeOut(4);
+	document.getElementById("picOne").src = "images/easy7a.png";
+	document.getElementById("picTwo").src = "images/easy7a.png";
+	document.getElementById("picThree").src = "images/easy7a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    		 	document.getElementById ("ask").innerHTML = "7.) Who eats bamboo?";
+	document.getElementById ("Button1").value = "tarsier";
+    	document.getElementById ("Button2").value = "kuala";
+    	document.getElementById ("Button3").value = "snail";
+    	document.getElementById ("Button4").value = "panda";
+    	questnum=7;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+  	 	document.getElementById ("ask").innerHTML = "7.) Who eats bamboo?";
+	document.getElementById ("Button1").value = "tarsier";
+    	document.getElementById ("Button2").value = "kuala";
+    	document.getElementById ("Button3").value = "snail";
+    	document.getElementById ("Button4").value = "panda";
+    	questnum=7;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	 	document.getElementById ("ask").innerHTML = "7.) Who eats bamboo?";
+	document.getElementById ("Button1").value = "tarsier";
+    	document.getElementById ("Button2").value = "kuala";
+    	document.getElementById ("Button3").value = "snail";
+    	document.getElementById ("Button4").value = "panda";
+    	questnum=7;
+    	}
+	}
+	else if (questnum==7)
+    {
+	$('#quest').fadeOut(3);
+	document.getElementById("picOne").src = "images/easy8a.png";
+	document.getElementById("picTwo").src = "images/easy8a.png";
+	document.getElementById("picThree").src = "images/easy8a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+  document.getElementById ("ask").innerHTML = "8.) What animal does not eat grass?";
+      	document.getElementById ("Button1").value = "pig";
+    	document.getElementById ("Button2").value = "horse";
+    	document.getElementById ("Button3").value = "carabao";
+    	document.getElementById ("Button4").value = "cow";
+    	questnum=8;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    document.getElementById ("ask").innerHTML = "8.) What animal does not eat grass?";
+      	document.getElementById ("Button1").value = "pig";
+    	document.getElementById ("Button2").value = "horse";
+    	document.getElementById ("Button3").value = "carabao";
+    	document.getElementById ("Button4").value = "cow";
+    	questnum=8;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+   document.getElementById ("ask").innerHTML = "8.) What animal does not eat grass?";
+      	document.getElementById ("Button1").value = "pig";
+    	document.getElementById ("Button2").value = "horse";
+    	document.getElementById ("Button3").value = "carabao";
+    	document.getElementById ("Button4").value = "cow";
+    	questnum=8;
+    	}
+	}
+	else if (questnum==8)
+    {
+	$('#quest').fadeOut(2);
+	document.getElementById("picOne").src = "images/easy9a.png";
+	document.getElementById("picTwo").src = "images/easy9a.png";
+	document.getElementById("picThree").src = "images/easy9a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+ document.getElementById ("ask").innerHTML = "9.) Who eats nectar?";
+      	document.getElementById ("Button1").value = "bee";
+    	document.getElementById ("Button2").value = "lizard";
+    	document.getElementById ("Button3").value = "flies";
+    	document.getElementById ("Button4").value = "mosquito";
+    	questnum=9;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+   document.getElementById ("ask").innerHTML = "9.) Who eats nectar?";
+      	document.getElementById ("Button1").value = "bee";
+    	document.getElementById ("Button2").value = "lizard";
+    	document.getElementById ("Button3").value = "flies";
+    	document.getElementById ("Button4").value = "mosquito";
+    	questnum=9;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+document.getElementById ("ask").innerHTML = "9.) Who eats nectar?";
+      	document.getElementById ("Button1").value = "bee";
+    	document.getElementById ("Button2").value = "lizard";
+    	document.getElementById ("Button3").value = "flies";
+    	document.getElementById ("Button4").value = "mosquito";
+    	questnum=9;
+    	}
+	}
+	else if (questnum==9)
+    {
+	$('#quest').fadeOut(1);
+	document.getElementById("picOne").src = "images/easy10a.png";
+	document.getElementById("picTwo").src = "images/easy10a.png";
+	document.getElementById("picThree").src = "images/easy10a.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "10.) What animal eats beef?";
+      	document.getElementById ("Button1").value = "lion";
+    	document.getElementById ("Button2").value = "penguin";
+    	document.getElementById ("Button3").value = "giraffe";
+    	document.getElementById ("Button4").value = "elephant";
+    	questnum=10;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+ 	document.getElementById ("ask").innerHTML = "10.) What animal eats beef?";
+      	document.getElementById ("Button1").value = "lion";
+    	document.getElementById ("Button2").value = "penguin";
+    	document.getElementById ("Button3").value = "giraffe";
+    	document.getElementById ("Button4").value = "elephant";
+    	questnum=10;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+  	document.getElementById ("ask").innerHTML = "10.) What animal eats beef?";
+      	document.getElementById ("Button1").value = "lion";
+    	document.getElementById ("Button2").value = "penguin";
+    	document.getElementById ("Button3").value = "giraffe";
+    	document.getElementById ("Button4").value = "elephant";
+    	questnum=10;
+    	}
+	}
+	else if (questnum==10)
+    {
+	$('#quest').fadeOut(1);
+	document.getElementById("picOne").src = "images/easy11a.png";
+	document.getElementById("picTwo").src = "images/easy11b.png";
+	document.getElementById("picThree").src = "images/easy11c.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "11.) Which word is not included?";
+      	document.getElementById ("Button1").value = "notebook";
+    	document.getElementById ("Button2").value = "battery";
+    	document.getElementById ("Button3").value = "shirt";
+    	document.getElementById ("Button4").value = "cable";
+    	questnum=11;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "11.) Which word is not included?";
+    	document.getElementById ("Button1").value = "towel";
+    	document.getElementById ("Button2").value = "belts";
+    	document.getElementById ("Button3").value = "cabinet";
+    	document.getElementById ("Button4").value = "pillow";
+    	questnum=11;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "11.) Which word is not included?";
+    	document.getElementById ("Button1").value = "plastic";
+    	document.getElementById ("Button2").value = "pants";
+    	document.getElementById ("Button3").value = "jacket";
+    	document.getElementById ("Button4").value = "finger";
+    	questnum=11;
+    	}
+	}
+	
+	else if (questnum==11)
+    {
+	$('#quest').fadeOut(1);
+	document.getElementById("picOne").src = "images/easy12a.png";
+	document.getElementById("picTwo").src = "images/easy12b.png";
+	document.getElementById("picThree").src = "images/easy12c.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "12.) Which word is not included?";
+      	document.getElementById ("Button1").value = "light";
+    	document.getElementById ("Button2").value = "bomb";
+    	document.getElementById ("Button3").value = "desks";
+    	document.getElementById ("Button4").value = "shoebox";
+    	questnum=12;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "12.) Which word is not included?";
+    	document.getElementById ("Button1").value = "fork";
+    	document.getElementById ("Button2").value = "soil";
+    	document.getElementById ("Button3").value = "camera";
+    	document.getElementById ("Button4").value = "television";
+    	questnum=12;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "12.) Which word is not included?";
+    	document.getElementById ("Button1").value = "sink";
+    	document.getElementById ("Button2").value = "sand";
+    	document.getElementById ("Button3").value = "water";
+    	document.getElementById ("Button4").value = "spoon";
+    	questnum=12;
+    	}
+	}
+	else if (questnum==12)
+    {
+	$('#quest').fadeOut(1);
+	document.getElementById("picOne").src = "images/easy13a.png";
+	document.getElementById("picTwo").src = "images/easy13b.png";
+	document.getElementById("picThree").src = "images/easy13c.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "13.) Which word is an animal?";
+      	document.getElementById ("Button1").value = "whale";
+    	document.getElementById ("Button2").value = "horse";
+    	document.getElementById ("Button3").value = "donkey";
+    	document.getElementById ("Button4").value = "camel";
+    	questnum=13;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "13.) Which word is an animal?";
+    	document.getElementById ("Button1").value = "kangaroo";
+    	document.getElementById ("Button2").value = "leopard";
+    	document.getElementById ("Button3").value = "goat";
+    	document.getElementById ("Button4").value = "shark";
+    	questnum=13;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "13.) Which word is an animal?";
+    	document.getElementById ("Button1").value = "eagle";
+    	document.getElementById ("Button2").value = "bat";
+    	document.getElementById ("Button3").value = "zebra";
+    	document.getElementById ("Button4").value = "deer";
+    	questnum=13;
+    	}
+	}
+	else if (questnum==13)
+    {
+	$('#quest').fadeOut(1);
+	document.getElementById("picOne").src = "images/easy14a.png";
+	document.getElementById("picTwo").src = "images/easy14b.png";
+	document.getElementById("picThree").src = "images/easy14c.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "14.) Which word starts with letter 'd'?";
+      	document.getElementById ("Button1").value = "dance";
+    	document.getElementById ("Button2").value = "deck";
+    	document.getElementById ("Button3").value = "diamond";
+    	document.getElementById ("Button4").value = "dot";
+    	questnum=14;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "14.) Which word starts with letter 'd'?";
+    	document.getElementById ("Button1").value = "date";
+    	document.getElementById ("Button2").value = "dress";
+    	document.getElementById ("Button3").value = "dustpan";
+    	document.getElementById ("Button4").value = "dives";
+    	questnum=14;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "14.) Which word starts with letter 'd'?";
+    	document.getElementById ("Button1").value = "ducks";
+    	document.getElementById ("Button2").value = "drum";
+    	document.getElementById ("Button3").value = "dump";
+    	document.getElementById ("Button4").value = "disk";
+    	questnum=14;
+    	}
+	}
+	else if (questnum==14)
+    {
+	$('#quest').fadeOut(1);
+	document.getElementById("picOne").src = "images/easy15a.png";
+	document.getElementById("picTwo").src = "images/easy15b.png";
+	document.getElementById("picThree").src = "images/easy15c.png";
+	
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1500).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("ask").innerHTML = "15.) Which word ends with letter 'e'";
+      	document.getElementById ("Button1").value = "love";
+    	document.getElementById ("Button2").value = "egg";
+    	document.getElementById ("Button3").value = "shoe";
+    	document.getElementById ("Button4").value = "snake";
+    	questnum=15;
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("ask").innerHTML = "15.) Which word ends with letter 'e'?";
+    	document.getElementById ("Button1").value = "seashore";
+    	document.getElementById ("Button2").value = "scam";
+    	document.getElementById ("Button3").value = "shrine";
+    	document.getElementById ("Button4").value = "shame";
+    	questnum=15;
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("ask").innerHTML = "15.) Which word ends with letter 'e'?";
+    	document.getElementById ("Button1").value = "fame";
+    	document.getElementById ("Button2").value = "lame";
+    	document.getElementById ("Button3").value = "bail";
+    	document.getElementById ("Button4").value = "sale";
+    	questnum=15;
+    	}
+	}
+}
+
+
+
+function hide()
+{
+	document.getElementById ('gameover').hidden = true;
+	document.getElementById ('back').hidden = true;
+	var list =['#picOne','#picTwo','#picThree'];
+	var randomnum=Math.floor(Math.random()*3);
+    $(list[randomnum]).fadeIn(1500).delay(1000).fadeOut(1000);
+    $('#quest').delay(3500).fadeIn(500);
+    
+    //$('#picTwo').delay(5000).fadeIn(1500);
+    
+
+    	    
+    	if (list[randomnum]=='#picOne')
+    	{
+    	document.getElementById ("Button1").value = "rabbit";
+    	document.getElementById ("Button2").value = "pig";
+    	document.getElementById ("Button3").value = "duck";
+    	document.getElementById ("Button4").value = "swan";
+    	document.getElementById ("ask").innerHTML = "1.) Who eats carrot?";
+    	}
+    	else if (list[randomnum]=='#picTwo')
+    	{
+    	document.getElementById ("Button1").value = "rat";
+    	document.getElementById ("Button2").value = "toad";
+    	document.getElementById ("Button3").value = "alligator";
+    	document.getElementById ("Button4").value = "eagle";
+    	document.getElementById ("ask").innerHTML = "1.) Who eats cheese?";
+    	}
+    	else if (list[randomnum]=='#picThree')
+    	{
+    	document.getElementById ("Button1").value = "mouse";
+    	document.getElementById ("Button2").value = "dog";
+    	document.getElementById ("Button3").value = "cat";
+    	document.getElementById ("Button4").value = "lizard";
+    	document.getElementById ("ask").innerHTML = "1.) Who eats bone?";
+    	}
+    
+
+}
+
+var timer;
+var progress;
+var max;
+
+$(document).ready(function() {
+progress = $("#myProgress");
+max = progress.attr("max");
+timer = setInterval("updateBar()", 2000);
+window.localStorage.setItem('value', document.getElementById('sc').value);
+});
+
+function updateBar() {
+	var current = progress.attr("value");
+	current += 3;
+	progress.attr("value", current);
+
+	if (current >= max) {
+	clearInterval(timer);
+	document.getElementById("myProgress").hidden=true;
+	$('#quest').fadeOut(1);
+	$('#pics').fadeOut(1);
+	document.getElementById ("sc").innerHTML = "Your score: "+score;
+	document.getElementById ('gameover').hidden = false;
+	document.getElementById ('back').hidden = false;
+	document.getElementById ('gameover').src = "images/gameover.png";
+	document.getElementById ('back').src = "images/back.png";
+	//document.getElementById ('back').src = "images/arrowback.png";
+	}
+}
+
+</script>
+
+</head>
+<body onload="hide()">
+<div class="auto-style1" > <a href="index.htmnl"><img src="images/menu.png" > </a></div>
+<div class="auto-style1">
+<audio id="audio" src="cautiouspath.mp3" autoplay="autoplay" style="display: none" loop="loop" controls></audio>
+<div id="life" style="width: 74px; height: 63px" class="auto-style6"> 
+<img src="images/life3.png" width="166" height="128" alt="" id="lifescale" class="auto-style5">
+
+
+	</div>
+	<div align="right">
+			<label id="sc" align ="center" style="color: white; font-family: 'Arial Rounded MT Bold'; font-size: x-large" class="auto-style1"></label>
+		<progress id="myProgress"  align="center" value="0" max="100"></progress><br> 
+			
+</div>
+<div id="pics" style="width: 700px; height: 800px" align="center " class="auto-style4">
+	<br><br>
+<img src="images/easy1a.png" width="700px" height="900px" id="picOne" alt="">
+<img src="images/easy1b.png" width="700px" height="900px" id="picTwo" alt="">
+<img src="images/easy1c.png" width="700px" height="900px" id="picThree" alt="">
+
+<br>&nbsp;<table id="quest" style="width: 100%; height: 93%;" class="auto-style7">
+		<tr>
+			<td class="auto-style2" style="height: 64px"><label id="ask">&nbsp;</label></td>
+		</tr>
+		<tr>
+			<td class="auto-style1">
+			<form method="post">
+				<br>
+				<input id="Button1" onclick="check_a()" type="button" style="width: 343px; height: 105px"><br>
+				<br>
+				<input id="Button2" onclick="check_b()" type="button" style="width: 344px; height: 100px"><br>
+				<br>
+				<input id="Button3" onclick="check_c()" type="button" style="width: 344px; height: 100px"><br>
+				<br>
+			<input id="Button4" onclick="check_d()" type="button" style="width: 344px; height: 100px" class="auto-style8">
+				<br><br>
+				<br><br>
+				<br>
+				<br><br><br><br><br>
+				</form>
+			</td>
+		</tr>
+	</table>
+	
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	
+</div>	
+	
+	<table class="auto-style3" style="width: 338px; height: 542px;">
+	<tr>
+			<td class="auto-style1" style="height: 526px"><script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+			
+			
+			
+			<img src="" alt="" id="gameover" width="554" height="459" class="auto-style9">
+			
+			</td>
+	</tr>
+	</table>
+<br><br>
+</div>
+
+</body>
+
+</html>
